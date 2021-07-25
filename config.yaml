@@ -1,5 +1,5 @@
 baseurl: https://we-r-us.netlify.app
-title: Creative portfolio
+title: Creative Portfolio
 theme: hugo-creative-portfolio-theme
 languageCode: en-us
 disqusShortname: ''
@@ -7,15 +7,15 @@ googleAnalytics: ''
 params:
   copyright: '&copy;2021 SMI, MAHE, Bangalore'
   description: Our Creative Portfolio in R
-  email: you@yoursite.com
+  email: arvind.venkatadri@manipal.edu
   navlinks:
     - home: yes
       name: Home
       url: portfolio/
     - name: About
       url: about/
-    - name: Get in touch
-      url: contact/
+    # - name: Get in touch
+    #   url: contact/
   sidebarAbout:
     - We are the Class of the R Language Workshop July 2021 at SMI, MAHE, Bangalore
     - 26 Budding Artists, Designers, and Coders.
@@ -32,3 +32,8 @@ params:
     #whatsapp: wa.me service link
     #youtube: full profile url in youtube
   style: default
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
