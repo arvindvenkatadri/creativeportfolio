@@ -5,7 +5,7 @@ date: '2021-07-25'
 slug: []
 categories: []
 tags: []
-image: https://www.alice-in-wonderland.net/wp-content/uploads/6.jpg
+image: https://www.alice-in-wonderland.net/wp-content/uploads/1book5.jpg
 caption: ''
 preview: yes
 output:
