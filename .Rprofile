@@ -21,7 +21,7 @@ options(
 )
 
 # fix Hugo version
-options(blogdown.hugo.version = "0.85.0")
+options(blogdown.hugo.version = "0.86.0")
 
 options(
   servr.daemon = TRUE,

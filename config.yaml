@@ -7,7 +7,7 @@ googleAnalytics: ''
 params:
   copyright: '&copy;2021 SMI, MAHE, Bangalore'
   description: Our Creative Portfolio in R
-  email: arvind.venkatadri@manipal.edu
+  email: arvind.venkatadri@manipal.educheck_net
   navlinks:
     - home: yes
       name: Home
