@@ -25,6 +25,11 @@ description: This is an analysis of the family relationships in Game of Thrones,
 knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
 ## Load frequently used packages for blog posts
 library(tidyverse)
+library(RColorBrewer)
+library(viridis)
+library(ggplot2)
+library(maps)
+library(xaringanExtra)
 ```
 
 ## Instructions
@@ -63,4 +68,18 @@ diamonds %>%
    
 ```
 
+# I have added this chunk right now to check the rmd. 
+
+```{r Look at msleep}
+names(msleep) # Column, i.e. Variable names
+head(msleep) # first six rows
+tail(msleep) # Last six rows
+dim(msleep) # Size of dataset
+
+any(is.na(msleep) == TRUE)
+
+```
+
+
+#ENDDDDD
 
