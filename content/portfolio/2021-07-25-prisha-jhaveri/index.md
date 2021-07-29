@@ -52,4 +52,4 @@ Diamonds are forever. We can see that from this graph below:
 
 <img src="unnamed-chunk-2-1.png" width="480" />
 
-
+<img src="unnamed-chunk-3-1.png" width="480" />

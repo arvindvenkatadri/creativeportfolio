@@ -63,4 +63,8 @@ diamonds %>%
    
 ```
 
-
+```{r}
+diamonds %>% 
+   ggplot(aes(x = carat, y = table, color = cut)) + 
+   geom_point()
+```
