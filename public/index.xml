@@ -319,10 +319,9 @@ Portfolio File FormatTo create a new Portfolio entry, make sure that you select
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://we-r-us.netlify.app/portfolio/2021-07-25-prisha-jhaveri/</guid>
-      <description>InstructionsDelete all of this and paste in your own content right here!!
-Portfolio File FormatTo create a new Portfolio entry, make sure that you selected R Markdown (.Rmd) as the format option of the post when using the New Post blogdown addin.
-Setup chunkMake sure you edit the setup chunk above and bring in all packages you need using r library(package_name).
-Inserting a Custom image in your PostThe easiest option is to use the blogdown Insert Image RStudio addin to add an external image.</description>
+      <description>IntroductionHi! I’m Prisha, and today I’ll be showing you a glimpse into what I’ve learnt in this workshop as we fell down the rabbit hole of R-studio.
+Graph 1This is a dataset talking about the different features of a group of diamonds.
+glimpse(diamonds)## Rows: 53,940## Columns: 10## $ carat &amp;lt;dbl&amp;gt; 0.23, 0.21, 0.23, 0.29, 0.31, 0.24, 0.24, 0.26, 0.22, 0.</description>
     </item>
     
     <item>
