@@ -36,16 +36,16 @@ description: Aryan's attempt at figuring out R and data visualization.
 <p>I have chosen the diamond data set which contains the prices and other attributes of almost 54000 diamonds. The variety of attributes are the price of the diamond in US dollars, the carat of the diamond, the quality of the diamond (cut of the diamond), the colour and clarity and various dimensions of the diamonds.</p>
 <pre><code>## Rows: 53,940
 ## Columns: 10
-## $ carat   &lt;dbl&gt; 0.23, 0.21, 0.23, 0.29, 0.31, 0.24, 0.24, 0.26, 0.22, 0.23, 0.~
-## $ cut     &lt;ord&gt; Ideal, Premium, Good, Premium, Good, Very Good, Very Good, Ver~
-## $ color   &lt;ord&gt; E, E, E, I, J, J, I, H, E, H, J, J, F, J, E, E, I, J, J, J, I,~
-## $ clarity &lt;ord&gt; SI2, SI1, VS1, VS2, SI2, VVS2, VVS1, SI1, VS2, VS1, SI1, VS1, ~
-## $ depth   &lt;dbl&gt; 61.5, 59.8, 56.9, 62.4, 63.3, 62.8, 62.3, 61.9, 65.1, 59.4, 64~
-## $ table   &lt;dbl&gt; 55, 61, 65, 58, 58, 57, 57, 55, 61, 61, 55, 56, 61, 54, 62, 58~
-## $ price   &lt;int&gt; 326, 326, 327, 334, 335, 336, 336, 337, 337, 338, 339, 340, 34~
-## $ x       &lt;dbl&gt; 3.95, 3.89, 4.05, 4.20, 4.34, 3.94, 3.95, 4.07, 3.87, 4.00, 4.~
-## $ y       &lt;dbl&gt; 3.98, 3.84, 4.07, 4.23, 4.35, 3.96, 3.98, 4.11, 3.78, 4.05, 4.~
-## $ z       &lt;dbl&gt; 2.43, 2.31, 2.31, 2.63, 2.75, 2.48, 2.47, 2.53, 2.49, 2.39, 2.~</code></pre>
+## $ carat   &lt;dbl&gt; 0.23, 0.21, 0.23, 0.29, 0.31, 0.24, 0.24, 0.26, 0.22, 0.23, 0.…
+## $ cut     &lt;ord&gt; Ideal, Premium, Good, Premium, Good, Very Good, Very Good, Ver…
+## $ color   &lt;ord&gt; E, E, E, I, J, J, I, H, E, H, J, J, F, J, E, E, I, J, J, J, I,…
+## $ clarity &lt;ord&gt; SI2, SI1, VS1, VS2, SI2, VVS2, VVS1, SI1, VS2, VS1, SI1, VS1, …
+## $ depth   &lt;dbl&gt; 61.5, 59.8, 56.9, 62.4, 63.3, 62.8, 62.3, 61.9, 65.1, 59.4, 64…
+## $ table   &lt;dbl&gt; 55, 61, 65, 58, 58, 57, 57, 55, 61, 61, 55, 56, 61, 54, 62, 58…
+## $ price   &lt;int&gt; 326, 326, 327, 334, 335, 336, 336, 337, 337, 338, 339, 340, 34…
+## $ x       &lt;dbl&gt; 3.95, 3.89, 4.05, 4.20, 4.34, 3.94, 3.95, 4.07, 3.87, 4.00, 4.…
+## $ y       &lt;dbl&gt; 3.98, 3.84, 4.07, 4.23, 4.35, 3.96, 3.98, 4.11, 3.78, 4.05, 4.…
+## $ z       &lt;dbl&gt; 2.43, 2.31, 2.31, 2.63, 2.75, 2.48, 2.47, 2.53, 2.49, 2.39, 2.…</code></pre>
 <pre><code>##      carat               cut        color        clarity          depth      
 ##  Min.   :0.2000   Fair     : 1610   D: 6775   SI1    :13065   Min.   :43.00  
 ##  1st Qu.:0.4000   Good     : 4906   E: 9797   VS2    :12258   1st Qu.:61.00  
@@ -106,7 +106,7 @@ description: Aryan's attempt at figuring out R and data visualization.
 <div id="the-simpsons-dataset" class="section level3">
 <h3>The Simpsons Dataset</h3>
 <p>I have decided to use The Simpsons as the show I will be using for the networks created below. I have taken a list of characters and their connections with each other from Season 03 Episode 05. In the data set, the nodes contain the columns of their name, sex, occupation and hair colour. In the edges dataset, it contains the to and from, the weight and the amount of dialogues exchanged between the two characters in that particular episode.</p>
-<pre><code>## # A tibble: 29 x 5
+<pre><code>## # A tibble: 29 × 5
 ##       id names               sex   occupation       `hair color`
 ##    &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;       
 ##  1     1 Homer Simpson       M     Safety Inspector None        
@@ -119,8 +119,8 @@ description: Aryan's attempt at figuring out R and data visualization.
 ##  8     8 Terri Mackleberry   F     Student          Purple      
 ##  9     9 Martin Prince       M     Student          Blonde      
 ## 10    10 Otto Mann           M     Bus Driver       Black       
-## # ... with 19 more rows</code></pre>
-<pre><code>## # A tibble: 44 x 5
+## # … with 19 more rows</code></pre>
+<pre><code>## # A tibble: 44 × 5
 ##     from    to weight relationship `dialogues exchanged`
 ##    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;                        &lt;dbl&gt;
 ##  1     1     5      8 family                           5
@@ -133,7 +133,7 @@ description: Aryan's attempt at figuring out R and data visualization.
 ##  8     9     6      3 friends                          1
 ##  9    10     6      1 acquaintance                     1
 ## 10    10     7      1 acquaintance                     1
-## # ... with 34 more rows</code></pre>
+## # … with 34 more rows</code></pre>
 </div>
 <div id="creating-a-graph-object" class="section level3">
 <h3>Creating a Graph Object</h3>
@@ -141,7 +141,7 @@ description: Aryan's attempt at figuring out R and data visualization.
 ## #
 ## # An undirected simple graph with 1 component
 ## #
-## # Node Data: 29 x 5 (active)
+## # Node Data: 29 × 5 (active)
 ##      id names               sex   occupation       `hair color`
 ##   &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;       
 ## 1     1 Homer Simpson       M     Safety Inspector None        
@@ -150,19 +150,19 @@ description: Aryan's attempt at figuring out R and data visualization.
 ## 4     4 Bart Simpson        M     Student          Blonde      
 ## 5     5 Lisa Simpson        F     Student          Blonde      
 ## 6     6 Milhouse Van Houten M     Student          Blue        
-## # ... with 23 more rows
+## # … with 23 more rows
 ## #
-## # Edge Data: 44 x 5
+## # Edge Data: 44 × 5
 ##    from    to weight relationship `dialogues exchanged`
 ##   &lt;int&gt; &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt;                        &lt;dbl&gt;
 ## 1     1     5      8 family                           5
 ## 2     4     6      9 friends                         10
 ## 3     4     5      6 family                           3
-## # ... with 41 more rows</code></pre>
+## # … with 41 more rows</code></pre>
 </div>
 <div id="visnetwork-data" class="section level3">
 <h3>VisNetwork Data</h3>
-<pre><code>## # A tibble: 29 x 5
+<pre><code>## # A tibble: 29 × 5
 ##       id names               sex   occupation       `hair color`
 ##    &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;       
 ##  1     1 Homer Simpson       M     Safety Inspector None        
@@ -175,8 +175,8 @@ description: Aryan's attempt at figuring out R and data visualization.
 ##  8     8 Terri Mackleberry   F     Student          Purple      
 ##  9     9 Martin Prince       M     Student          Blonde      
 ## 10    10 Otto Mann           M     Bus Driver       Black       
-## # ... with 19 more rows</code></pre>
-<pre><code>## # A tibble: 44 x 5
+## # … with 19 more rows</code></pre>
+<pre><code>## # A tibble: 44 × 5
 ##     from    to weight relationship `dialogues exchanged`
 ##    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;                        &lt;dbl&gt;
 ##  1     1     5      8 family                           5
@@ -189,8 +189,8 @@ description: Aryan's attempt at figuring out R and data visualization.
 ##  8     9     6      3 friends                          1
 ##  9    10     6      1 acquaintance                     1
 ## 10    10     7      1 acquaintance                     1
-## # ... with 34 more rows</code></pre>
-<pre><code>## # A tibble: 29 x 5
+## # … with 34 more rows</code></pre>
+<pre><code>## # A tibble: 29 × 5
 ##       id label               sex   occupation       group 
 ##    &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt; 
 ##  1     1 Homer Simpson       M     Safety Inspector None  
@@ -203,8 +203,8 @@ description: Aryan's attempt at figuring out R and data visualization.
 ##  8     8 Terri Mackleberry   F     Student          Purple
 ##  9     9 Martin Prince       M     Student          Blonde
 ## 10    10 Otto Mann           M     Bus Driver       Black 
-## # ... with 19 more rows</code></pre>
-<pre><code>## # A tibble: 44 x 5
+## # … with 19 more rows</code></pre>
+<pre><code>## # A tibble: 44 × 5
 ##     from    to weight relationship `dialogues exchanged`
 ##    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;                        &lt;dbl&gt;
 ##  1     1     5      8 family                           5
@@ -217,7 +217,7 @@ description: Aryan's attempt at figuring out R and data visualization.
 ##  8     9     6      3 friends                          1
 ##  9    10     6      1 acquaintance                     1
 ## 10    10     7      1 acquaintance                     1
-## # ... with 34 more rows</code></pre>
+## # … with 34 more rows</code></pre>
 </div>
 <div id="interactive-network-based-on-hair-colour-of-the-characters" class="section level3">
 <h3>Interactive Network Based on Hair Colour of the Characters</h3>
