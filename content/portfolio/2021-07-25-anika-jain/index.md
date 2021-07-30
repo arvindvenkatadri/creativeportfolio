@@ -125,7 +125,7 @@ plot
 ```
 ## function (x, y, ...) 
 ## UseMethod("plot")
-## <bytecode: 0x0000000015d9ae30>
+## <bytecode: 0x0000000015fcc428>
 ## <environment: namespace:base>
 ```
 
