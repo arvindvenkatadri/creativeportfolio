@@ -22,15 +22,15 @@ description: This is my journey exploring maps, graphs and networks!
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<blockquote>
-<h1 id="graph-no1."><strong>Graph No1.</strong></h1>
-<h4 id="in-this-graph-weve-explored-a-total-of-three-variables-i.e.-clarity-cut-and-the-price-of-the-diamonds-dataset.-using-the-rcolorbrewer-package-colours-have-also-been-added.">In this graph, we’ve explored a total of three variables, i.e., clarity, cut and the price of the diamonds dataset. Using the RColorBrewer package, colours have also been added.</h4>
-<h6 id="via-lab04"><em>Via LAB04</em></h6>
-</blockquote>
+<div id="graph-no-1." class="section level2">
+<h2>Graph No 1.</h2>
+<p>In this graph, we’ve explored a total of three variables, i.e., clarity, cut and the price of the diamonds dataset. Using the RColorBrewer package, colours have also been added. <em>Via LAB04</em></p>
 <pre class="r"><code>ggplot(diamonds) + geom_point(aes(x = clarity, y = price, color = cut), size = 3) + scale_colour_viridis_d(option = &quot;inferno&quot;) + labs(title = &quot;Viridis Palette&quot;, subtitle = &quot;Option Inferno&quot;) + facet_wrap(~cut)</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="480" /></p>
-<div id="setup-adding-the-longitude-and-lattitude-of-delhi-to-create-maps-of-my-surrounding-areas-and" class="section level4">
-<h4><em>SETUP-Adding the longitude and lattitude of Delhi to create maps of my surrounding areas and</em></h4>
+</div>
+<div id="graph-no-2." class="section level2">
+<h2>Graph No 2.</h2>
+<p>Adding the longitude and latitude of Delhi to create maps of my surrounding areas</p>
 <pre class="r"><code>bbox &lt;- osmplotr::get_bbox(c(77.10,28.66,77.17,28.70))
 
 bbox_l &lt;- osmdata::getbb(&quot;Delhi, India&quot;) 
@@ -57,13 +57,13 @@ bbox_l &lt;- osmdata::getbb(&quot;Delhi, India&quot;)
 <pre><code>## converting OSM data to sf format</code></pre>
 <pre><code>## Warning in extract_osm_objects(key = &quot;landuse&quot;, value = &quot;grass&quot;, bbox = bbox):
 ## No valid data returned. (Maybe try a different &#39;return_type&#39;)</code></pre>
-<pre class="r"><code>dat_T &lt;- extract_osm_objects (key = &#39;natural&#39;, value = &#39;tree&#39;, bbox = bbox)</code></pre>
+<pre class="r"><code>dat_T &lt;- extract_osm_objects (key = &#39;natural&#39;, value = &#39;tree&#39;, bbox = bbox,return_type = &quot;point&quot;)</code></pre>
 <pre><code>## Issuing query to Overpass API ...</code></pre>
 <pre><code>## Rate limit: 0</code></pre>
 <pre><code>## Query complete!</code></pre>
 <pre><code>## converting OSM data to sf format</code></pre>
-<pre><code>## Warning in extract_osm_objects(key = &quot;natural&quot;, value = &quot;tree&quot;, bbox = bbox): No
-## valid data returned. (Maybe try a different &#39;return_type&#39;)</code></pre>
+<pre><code>## Warning in extract_osm_objects(key = &quot;natural&quot;, value = &quot;tree&quot;, bbox = bbox, :
+## No valid data returned. (Maybe try a different &#39;return_type&#39;)</code></pre>
 <pre class="r"><code>dat_R &lt;- extract_osm_objects(bbox = bbox, key = &quot;amenity&quot;, value = &quot;restaurant&quot;, return_type = &quot;point&quot;) </code></pre>
 <pre><code>## Issuing query to Overpass API ...</code></pre>
 <pre><code>## Rate limit: 0</code></pre>
@@ -71,11 +71,8 @@ bbox_l &lt;- osmdata::getbb(&quot;Delhi, India&quot;)
 <pre><code>## converting OSM data to sf format</code></pre>
 <pre class="r"><code>tmap_mode(&quot;plot&quot;)</code></pre>
 <pre><code>## tmap mode set to plotting</code></pre>
-<blockquote>
-<h1 id="graph-no2."><strong>Graph No2.</strong></h1>
-<h4 id="using-the-data-from-around-my-lacation-plotting-graphs-of-various-features.">Using the data from around my lacation, plotting graphs of various features.</h4>
-<h6 id="via-lab06"><em>Via LAB06</em></h6>
-</blockquote>
+<p><strong>Graph No2.</strong><br />
+Using the data from around my lacation, plotting graphs of various features. <em>Via LAB06</em></p>
 <pre class="r"><code>#1
 tm_shape(dat_B) + tm_bubbles(col = &quot;red&quot;) +
   
@@ -88,20 +85,19 @@ tm_shape(dat_B) + tm_bubbles(col = &quot;red&quot;) +
    labs(title = &quot;It&#39;s a bloody red city&quot;)</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="480" /></p>
 </div>
-<div id="setup-reading-data-ga" class="section level4">
-<h4><em>SETUP-Reading data-ga</em></h4>
+<div id="graph-no-3." class="section level2">
+<h2>Graph No 3.</h2>
+<div id="setup-reading-data" class="section level4">
+<h4>*SETUP-Reading data</h4>
 <pre class="r"><code>hillhouse_nodes &lt;- read_csv(&quot;data/hillhouse-nodes.csv&quot;)</code></pre>
+<pre><code>## Rows: 24 Columns: 7</code></pre>
+<pre><code>## -- Column specification --------------------------------------------------------
+## Delimiter: &quot;,&quot;
+## chr (6): name, sex, race, position, haircolour, sign
+## dbl (1): birthyear</code></pre>
 <pre><code>## 
-## -- Column specification --------------------------------------------------------
-## cols(
-##   name = col_character(),
-##   sex = col_character(),
-##   race = col_character(),
-##   birthyear = col_double(),
-##   position = col_character(),
-##   haircolour = col_character(),
-##   sign = col_character()
-## )</code></pre>
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>hillhouse_nodes</code></pre>
 <pre><code>## # A tibble: 24 x 7
 ##    name                      sex   race  birthyear position haircolour sign    
@@ -118,14 +114,14 @@ tm_shape(dat_B) + tm_bubbles(col = &quot;red&quot;) +
 ## 10 Kevin Harris              M     White      1975 Other    black      &lt;NA&gt;    
 ## # ... with 14 more rows</code></pre>
 <pre class="r"><code>hillhouse_edges &lt;- read_csv(&quot;data/hillhouse-edges.csv&quot;)</code></pre>
+<pre><code>## Rows: 18 Columns: 4</code></pre>
+<pre><code>## -- Column specification --------------------------------------------------------
+## Delimiter: &quot;,&quot;
+## chr (3): from, to, type
+## dbl (1): ID</code></pre>
 <pre><code>## 
-## -- Column specification --------------------------------------------------------
-## cols(
-##   from = col_character(),
-##   to = col_character(),
-##   type = col_character(),
-##   ID = col_double()
-## )</code></pre>
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>hillhouse_edges</code></pre>
 <pre><code>## # A tibble: 18 x 4
 ##    from                      to                   type          ID
@@ -174,11 +170,8 @@ ga</code></pre>
 ## 2     5    10 married      2
 ## 3     7    15 friends      3
 ## # ... with 15 more rows</code></pre>
-<blockquote>
-<h1 id="graph-no3."><strong>Graph No3.</strong></h1>
-<h4 id="a-different-graph-style---set-graph">A different graph style - set graph</h4>
-<h6 id="via-lab07"><em>Via LAB07</em></h6>
-</blockquote>
+<p><strong>Graph No3.</strong><br />
+A different graph style - set graph <em>Via LAB07</em></p>
 <pre class="r"><code>set_graph_style()
 
 ga %&gt;% 
@@ -189,14 +182,10 @@ ga %&gt;%
   ggraph(layout = &quot;nicely&quot;) +
   geom_edge_link(aes(alpha = betweenness)) +
   geom_node_point(aes(size = degree, colour = degree)) + 
-  facet_graph(type ~ race) +
+  #facet_graph(type ~ race) +
   scale_color_gradient(guide = &quot;legend&quot;) +
   labs(title = &quot;Haunting of the hill house&quot;, subtitle = &quot;Third graph&quot;, caption = &quot;Ngl, I&#39;m tired now..&quot;)</code></pre>
 <pre><code>## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
-## found in Windows font database</code></pre>
-<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-## family not found in Windows font database</code></pre>
-<pre><code>## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
 ## found in Windows font database
 
 ## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
@@ -230,49 +219,9 @@ ga %&gt;%
 ## family not found in Windows font database
 
 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-## family not found in Windows font database</code></pre>
-<pre><code>## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
+## family not found in Windows font database
 
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database</code></pre>
-<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
 ## family not found in Windows font database
 
 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
@@ -296,6 +245,7 @@ ga %&gt;%
 </div>
 <div id="during-this-workshop-it-was-a-heck-load-of-digital-work-but-im-not-complaining-though.-this-might-have-been-the-first-time-ive-stared-at-my-screen-for-so-long-but-i-did-get-to-learn-something.-i-wouldnt-persoanlly-want-to-take-anything-forward-from-this-class-in-my-future-because-i-dont-have-any-personal-interests-in-coding-or-using-a-digital-platform-in-general.-but-i-sure-was-intrigued-by-the-level-of-learning-and-the-amount-of-enthusiasm-some-of-my-classmates-showed." class="section level4">
 <h4><em>During this workshop, it was a heck load of digital work but I’m not complaining though. This might have been the first time I’ve stared at my screen for so long but I did get to learn something. I wouldn’t persoanlly want to take anything forward from this class in my future because I don’t have any personal interests in coding or using a digital platform in general. But, I sure was intrigued by the level of learning and the amount of enthusiasm some of my classmates showed.</em></h4>
+</div>
 </div>
 <div id="fin." class="section level2">
 <h2>FIN.</h2>

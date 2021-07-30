@@ -32,11 +32,10 @@ library(RColorBrewer)
 ```
 
 
-> # **Graph No1.**  
-> 
-> #### In this graph, we've explored a total of three variables, i.e., clarity, cut and the price of the diamonds dataset.  Using the RColorBrewer package, colours have also been added.  
-> ######  _Via LAB04_  
-> 
+## Graph No 1.
+
+In this graph, we've explored a total of three variables, i.e., clarity, cut and the price of the diamonds dataset.  Using the RColorBrewer package, colours have also been added.  _Via LAB04_  
+
 
 ```{r }
 
@@ -45,9 +44,9 @@ ggplot(diamonds) + geom_point(aes(x = clarity, y = price, color = cut), size = 3
 ```
 
 
+## Graph No 2.
 
-
-#### *SETUP-Adding the longitude and lattitude of Delhi to create maps of my surrounding areas and*
+Adding the longitude and latitude of Delhi to create maps of my surrounding areas
 
 ```{r Another Setup}
 
@@ -64,7 +63,7 @@ dat_B <- extract_osm_objects (key = 'building', bbox = bbox)
 dat_H <- extract_osm_objects (key = 'highway', bbox = bbox)
 dat_P <- extract_osm_objects (key = 'park', bbox = bbox)
 dat_G <- extract_osm_objects (key = 'landuse', value = 'grass', bbox = bbox)
-dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox)
+dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox,return_type = "point")
 dat_R <- extract_osm_objects(bbox = bbox, key = "amenity", value = "restaurant", return_type = "point") 
 
 ```
@@ -77,10 +76,8 @@ tmap_mode("plot")
 
 
 
-> # **Graph No2.**  
->
-> #### Using the data from around my lacation, plotting graphs of various features.  
-> ######  _Via LAB06_  
+**Graph No2.**  
+Using the data from around my lacation, plotting graphs of various features.  _Via LAB06_  
 
 ```{r}
 
@@ -98,8 +95,9 @@ tm_shape(dat_B) + tm_bubbles(col = "red") +
 ```
 
 
+## Graph No 3.
 
-#### *SETUP-Reading data-ga*
+#### *SETUP-Reading data
 
 ```{r 1.Read-greys-anatomy-data}
 
@@ -119,15 +117,9 @@ ga
 ```
 
 
+**Graph No3.**  
+A different graph style - set graph _Via LAB07_  
 
-
-
-> # **Graph No3.**  
-> 
-> 
-> #### A different graph style - set graph   
-> ######  _Via LAB07_  
-> 
 
 ```{r}
 
@@ -141,7 +133,7 @@ ga %>%
   ggraph(layout = "nicely") +
   geom_edge_link(aes(alpha = betweenness)) +
   geom_node_point(aes(size = degree, colour = degree)) + 
-  facet_graph(type ~ race) +
+  #facet_graph(type ~ race) +
   scale_color_gradient(guide = "legend") +
   labs(title = "Haunting of the hill house", subtitle = "Third graph", caption = "Ngl, I'm tired now..")
 

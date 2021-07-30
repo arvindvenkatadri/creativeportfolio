@@ -21,11 +21,10 @@ description: This is my journey exploring maps, graphs and networks!
 
 
 
-> # **Graph No1.**  
-> 
-> #### In this graph, we've explored a total of three variables, i.e., clarity, cut and the price of the diamonds dataset.  Using the RColorBrewer package, colours have also been added.  
-> ######  _Via LAB04_  
-> 
+## Graph No 1.
+
+In this graph, we've explored a total of three variables, i.e., clarity, cut and the price of the diamonds dataset.  Using the RColorBrewer package, colours have also been added.  _Via LAB04_  
+
 
 
 ```r
@@ -35,9 +34,9 @@ ggplot(diamonds) + geom_point(aes(x = clarity, y = price, color = cut), size = 3
 <img src="index_files/figure-html/unnamed-chunk-1-1.png" width="480" />
 
 
+## Graph No 2.
 
-
-#### *SETUP-Adding the longitude and lattitude of Delhi to create maps of my surrounding areas and*
+Adding the longitude and latitude of Delhi to create maps of my surrounding areas
 
 
 ```r
@@ -134,7 +133,7 @@ dat_G <- extract_osm_objects (key = 'landuse', value = 'grass', bbox = bbox)
 ```
 
 ```r
-dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox)
+dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox,return_type = "point")
 ```
 
 ```
@@ -154,8 +153,8 @@ dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox)
 ```
 
 ```
-## Warning in extract_osm_objects(key = "natural", value = "tree", bbox = bbox): No
-## valid data returned. (Maybe try a different 'return_type')
+## Warning in extract_osm_objects(key = "natural", value = "tree", bbox = bbox, :
+## No valid data returned. (Maybe try a different 'return_type')
 ```
 
 ```r
@@ -189,10 +188,8 @@ tmap_mode("plot")
 
 
 
-> # **Graph No2.**  
->
-> #### Using the data from around my lacation, plotting graphs of various features.  
-> ######  _Via LAB06_  
+**Graph No2.**  
+Using the data from around my lacation, plotting graphs of various features.  _Via LAB06_  
 
 
 ```r
@@ -211,8 +208,9 @@ tm_shape(dat_B) + tm_bubbles(col = "red") +
 <img src="index_files/figure-html/unnamed-chunk-4-1.png" width="480" />
 
 
+## Graph No 3.
 
-#### *SETUP-Reading data-ga*
+#### *SETUP-Reading data
 
 
 ```r
@@ -220,17 +218,20 @@ hillhouse_nodes <- read_csv("data/hillhouse-nodes.csv")
 ```
 
 ```
-## 
+## Rows: 24 Columns: 7
+```
+
+```
 ## -- Column specification --------------------------------------------------------
-## cols(
-##   name = col_character(),
-##   sex = col_character(),
-##   race = col_character(),
-##   birthyear = col_double(),
-##   position = col_character(),
-##   haircolour = col_character(),
-##   sign = col_character()
-## )
+## Delimiter: ","
+## chr (6): name, sex, race, position, haircolour, sign
+## dbl (1): birthyear
+```
+
+```
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 ```r
@@ -259,14 +260,20 @@ hillhouse_edges <- read_csv("data/hillhouse-edges.csv")
 ```
 
 ```
-## 
+## Rows: 18 Columns: 4
+```
+
+```
 ## -- Column specification --------------------------------------------------------
-## cols(
-##   from = col_character(),
-##   to = col_character(),
-##   type = col_character(),
-##   ID = col_double()
-## )
+## Delimiter: ","
+## chr (3): from, to, type
+## dbl (1): ID
+```
+
+```
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 ```r
@@ -330,15 +337,9 @@ ga
 ```
 
 
+**Graph No3.**  
+A different graph style - set graph _Via LAB07_  
 
-
-
-> # **Graph No3.**  
-> 
-> 
-> #### A different graph style - set graph   
-> ######  _Via LAB07_  
-> 
 
 
 ```r
@@ -352,7 +353,7 @@ ga %>%
   ggraph(layout = "nicely") +
   geom_edge_link(aes(alpha = betweenness)) +
   geom_node_point(aes(size = degree, colour = degree)) + 
-  facet_graph(type ~ race) +
+  #facet_graph(type ~ race) +
   scale_color_gradient(guide = "legend") +
   labs(title = "Haunting of the hill house", subtitle = "Third graph", caption = "Ngl, I'm tired now..")
 ```
@@ -360,16 +361,6 @@ ga %>%
 ```
 ## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
 ## found in Windows font database
-```
-
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-## family not found in Windows font database
-```
-
-```
-## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
-## found in Windows font database
 
 ## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
 ## found in Windows font database
@@ -412,53 +403,7 @@ ga %>%
 
 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
 ## family not found in Windows font database
-```
 
-```
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-```
-
-```
 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
 ## family not found in Windows font database
 
