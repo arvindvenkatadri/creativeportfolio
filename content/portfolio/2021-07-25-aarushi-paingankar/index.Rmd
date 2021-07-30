@@ -102,12 +102,12 @@ glimpse(moma)
 ggplot(data = moma, mapping = aes(x = year_acquired, y = height_cm, color = gift)) +geom_point() + facet_wrap(~ purchase) + scale_color_brewer(palette = "greens")
 ```
 
-
+## Graph 3
 
 **The map below is a map of Andheri, Mumbai. The pink shapes indicate the amenities and the blue ones show the buildings in andheri. The white is for the highway. I set the background of the map to black so that the light blue, white and pink stands out. **
 
 ```{r, echo=FALSE}
-bbox_andheri <- prettymapr::searchbbox(querystring = "Andheri, Mumbai, India")
+bbox_andheri <- osmdata::getbb("Andheri, Mumbai, India")
 
 bbox_andheri
 
