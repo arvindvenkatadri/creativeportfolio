@@ -28,38 +28,33 @@ library(extrafont)
 loadfonts()
 library(tidyverse)
 library(igraph)
-library(netrankr)
+
 library(tidygraph)
 library(ggraph)
 library(graphlayouts)
 library(igraphdata)
-library(downloadthis)
+
 library(RColorBrewer)
 library(osmplotr)
 library(tmap)
 ```
 
+## Graph 1: Bar Graph from Lab 03, Midwest Database
+
+This graph shows that which state in the Midwest consists of what kind of categories.
+```{r}
+ggplot(midwest) + geom_bar(aes(x= state, fill= category), position = "stack")
+```
+
+
+
+## Graph 2: Map Of My City Jodhpur & Its famous Places/ Restaurants
+#### Map from Lab 06
 
 ```{r}
 bbox <- osmplotr::get_bbox(c(73.02,26.25,73.15,26.35))
 bbox
 
-bbox_l <- osmdata::getbb("Jodhpur, India")
-bbox_l
-
-bbox_p <- prettymapr::searchbbox("Jodhpur")
-bbox_p
-```
-
-```{r}
-bbox_jodhpur <- prettymapr::searchbbox(querystring = "Jodhpur, India")
-```
-
-
-```{r}
-bbox
-bbox_l
-bbox_p
 ```
 
 
@@ -76,33 +71,27 @@ dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox)
 dat_R <- extract_osm_objects(bbox = bbox, 
                              key = "amenity", 
                              value = "restaurant", 
-                             return_type = "point") #<<
+                             return_type = "point")
 ```
 
 
-
-
-
-# Graph 1: Bar Graph from Lab 03, Midwest Database
-## This graph shows that which state in the Midwest consists of what kind of categories.
-```{r}
-ggplot(midwest) + geom_bar(aes(x= state, fill= category), position = "stack")
-```
-
-# Map Of My City Jodhpur & Its famous Places/ Restaurants
-## Map from Lab 06
 ```{r}
 #01
 tm_shape(dat_B) + tm_fill(col = "blue") +
   
 #02
-  tm_shape(dat_H) + tm_lines(col = "green", lwd = 1)
+  tm_shape(dat_H) + tm_lines(col = "green", lwd = 1) +
 
 #03
-  tm_shape(dat_R) + tm_dots(size = 1, col = "pink", shape = 21) + tm_text("name", auto.placement = TRUE) + tm_compass(type = "rose", position = c("right", "top"))
+  tm_shape(dat_R) + 
+    tm_dots(size = 1, col = "pink", shape = 21) + 
+    tm_text("name", auto.placement = TRUE) + 
+    tm_compass(type = "rose", position = c("right", "top"))
  
 ```
 
+## Graph 3: The Graph from my favourite TV Show: Narcos
+### Graph from the learnings of Lab 07
 
 ```{r}
 narcos_nodes <- read_csv("./Data/narcos-nodes.csv")
@@ -110,6 +99,7 @@ narcos_edges <- read_csv("./Data/narcos-edges.csv")
 narcos_nodes
 narcos_edges
 ```
+
 ```{r}
 ga <- tbl_graph(nodes = narcos_nodes, 
                 edges = narcos_edges, 
@@ -117,8 +107,7 @@ ga <- tbl_graph(nodes = narcos_nodes,
 ga
 ```
 
-# 1. The Graph from my favourite TV Show: Narcos
-## Graph from the learnings of Lab 07
+
 ```{r}
 ggraph(ga, layout = "linear", circular = TRUE) + 
   geom_edge_arc(aes(), alpha = 0.8) + 
@@ -132,8 +121,10 @@ ggraph(ga, layout = "linear", circular = TRUE) +
         aspect.ratio = 1)
 ```
 
-# Graph 2 from the same TV show. 
-## showing the relationship between the characters
+### Graph 2 from the same TV show. 
+
+Showing the relationship between the characters
+
 ```{r}
 set_graph_style()
 
