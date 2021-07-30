@@ -39,9 +39,9 @@ I entered this information in an excel sheet and exported it as a **"csv"** file
 I also created a sub data set where the **centrality deagree** and **betweenness** are introduced. Centrality degree measures the number of edges connected to a node and betweenness shows us how much a node is playing a part in connecting a pair of other nodes. 
 
 ```{r read-1}
-frnds_nodes <- read_csv("./Data/frnds_nodes.csv")
+frnds_nodes <- read_csv("frnds_nodes.csv")
 frnds_nodes
-frnds_edges <- read.csv("./Data/frnds_edges.csv")
+frnds_edges <- read.csv("frnds_edges.csv")
 frnds_edges 
 ```
 
