@@ -57,7 +57,7 @@ dat_B <- extract_osm_objects (key = 'building', bbox = bbox)
 ```
 
 ```
-## Rate limit: 2
+## Rate limit: 0
 ```
 
 ```
@@ -77,7 +77,7 @@ dat_H <- extract_osm_objects (key = 'highway', bbox = bbox)
 ```
 
 ```
-## Rate limit: 2
+## Rate limit: 0
 ```
 
 ```
@@ -97,7 +97,7 @@ dat_P <- extract_osm_objects (key = 'park', bbox = bbox)
 ```
 
 ```
-## Rate limit: 2
+## Rate limit: 0
 ```
 
 ```
@@ -117,7 +117,7 @@ dat_G <- extract_osm_objects (key = 'landuse', value = 'grass', bbox = bbox)
 ```
 
 ```
-## Rate limit: 2
+## Rate limit: 0
 ```
 
 ```
@@ -142,11 +142,7 @@ dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox)
 ```
 
 ```
-## Rate limit: 2
-```
-
-```
-## Request failed [429]. Retrying in 1 seconds...
+## Rate limit: 0
 ```
 
 ```
@@ -171,7 +167,7 @@ dat_R <- extract_osm_objects(bbox = bbox, key = "amenity", value = "restaurant",
 ```
 
 ```
-## Rate limit: 2
+## Rate limit: 0
 ```
 
 ```
@@ -224,20 +220,17 @@ hillhouse_nodes <- read_csv("data/hillhouse-nodes.csv")
 ```
 
 ```
-## Rows: 24 Columns: 7
-```
-
-```
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (6): name, sex, race, position, haircolour, sign
-## dbl (1): birthyear
-```
-
-```
 ## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## -- Column specification --------------------------------------------------------
+## cols(
+##   name = col_character(),
+##   sex = col_character(),
+##   race = col_character(),
+##   birthyear = col_double(),
+##   position = col_character(),
+##   haircolour = col_character(),
+##   sign = col_character()
+## )
 ```
 
 ```r
@@ -245,7 +238,7 @@ hillhouse_nodes
 ```
 
 ```
-## # A tibble: 24 × 7
+## # A tibble: 24 x 7
 ##    name                      sex   race  birthyear position haircolour sign    
 ##    <chr>                     <chr> <chr>     <dbl> <chr>    <chr>      <chr>   
 ##  1 Eleanor Crain Vance       F     White      1986 Daughter brown      Pisces  
@@ -258,7 +251,7 @@ hillhouse_nodes
 ##  8 Poppy Hill                F     White        NA Ghost    Burgundy   <NA>    
 ##  9 Clara Dudley              F     White        NA Maid     black      <NA>    
 ## 10 Kevin Harris              M     White      1975 Other    black      <NA>    
-## # … with 14 more rows
+## # ... with 14 more rows
 ```
 
 ```r
@@ -266,20 +259,14 @@ hillhouse_edges <- read_csv("data/hillhouse-edges.csv")
 ```
 
 ```
-## Rows: 18 Columns: 4
-```
-
-```
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: ","
-## chr (3): from, to, type
-## dbl (1): ID
-```
-
-```
 ## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## -- Column specification --------------------------------------------------------
+## cols(
+##   from = col_character(),
+##   to = col_character(),
+##   type = col_character(),
+##   ID = col_double()
+## )
 ```
 
 ```r
@@ -287,7 +274,7 @@ hillhouse_edges
 ```
 
 ```
-## # A tibble: 18 × 4
+## # A tibble: 18 x 4
 ##    from                      to                   type          ID
 ##    <chr>                     <chr>                <chr>      <dbl>
 ##  1 Theodora Crain            Trish Park           benefits       1
@@ -322,7 +309,7 @@ ga
 ## #
 ## # An undirected simple graph with 8 components
 ## #
-## # Node Data: 24 × 7 (active)
+## # Node Data: 24 x 7 (active)
 ##   name                      sex   race  birthyear position haircolour sign    
 ##   <chr>                     <chr> <chr>     <dbl> <chr>    <chr>      <chr>   
 ## 1 Eleanor Crain Vance       F     White      1986 Daughter brown      Pisces  
@@ -331,15 +318,15 @@ ga
 ## 4 Olivia Crain              F     White      1982 Mother   brownblack Virgo   
 ## 5 Shirley Crain Harris      F     White      1980 Daughter brown      Aquarius
 ## 6 Steven Crain              M     White      1979 Son      brown      Aries   
-## # … with 18 more rows
+## # ... with 18 more rows
 ## #
-## # Edge Data: 18 × 4
+## # Edge Data: 18 x 4
 ##    from    to type        ID
 ##   <int> <int> <chr>    <dbl>
 ## 1     2    13 benefits     1
 ## 2     5    10 married      2
 ## 3     7    15 friends      3
-## # … with 15 more rows
+## # ... with 15 more rows
 ```
 
 
@@ -368,6 +355,130 @@ ga %>%
   facet_graph(type ~ race) +
   scale_color_gradient(guide = "legend") +
   labs(title = "Haunting of the hill house", subtitle = "Third graph", caption = "Ngl, I'm tired now..")
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
+## found in Windows font database
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
+## found in Windows font database
+
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
+## found in Windows font database
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+```
+
+```
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
+## found in Windows font database
+
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
+## found in Windows font database
+
+## Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not
+## found in Windows font database
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+## family not found in Windows font database
 ```
 
 <img src="index_files/figure-html/unnamed-chunk-6-1.png" width="480" />
