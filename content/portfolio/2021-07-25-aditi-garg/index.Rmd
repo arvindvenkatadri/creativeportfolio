@@ -78,17 +78,5 @@ geom_point(size = 0.01)
 
 ## My Course Reflection
 
-This course was about.....
-
-What I learnt....
-
-How it will help my practice as an aspiring artist and designer....
-
-Arvind is a horrible teacher and simply does not get what we need.
-Boomers should be allowed to teach any more in Srishti.
-
-Etc.
-
-Jai Hind.
-
+This course was very insightful, i hope to use rstudio much more in the future, arvind was also an angel of a teacher, i hope we can meet again in the future :)
 
