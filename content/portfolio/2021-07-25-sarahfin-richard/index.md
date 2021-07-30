@@ -16,40 +16,51 @@ output:
     fig_width: 5
     fig_height: 5
     keep_md: yes
-description: This is an analysis of the family relationships in Game of Thrones, using
-  R. **EDIT THIS**.
+description: Alice in Wonde-R-land, An insight into a two week long journey with coding in R and making graphs.
 ---
 
 
 
 
-## Instructions
+<font size="3">
 
-Delete all of this and paste in your own content right here!!
+This workshop involved all of us learning to code using R. We made different kinds of graphs for different things. Here are some of the graphs we made:
 
-### Portfolio File Format
+### **Looking at baby names in the United States:**
 
-To create a new Portfolio entry, make sure that you selected `R Markdown (.Rmd)` as the _format_ option of the post when using the `New Post` `blogdown` addin.
+Here, we looked at different baby names and tried to see how many times they occured in a year. This graph analyses the names, Leslie, Lesley and Leslee:
 
-### Setup chunk
-
-Make sure you edit the setup chunk above and bring in **all** packages you need using *r library(package_name)*. 
+<img src="manipulate_name_data-1.png" width="480" />
 
 
-### Inserting a Custom image in your Post
+### **Looking at the sleep patterns of animals:**
 
-The easiest option is to use the `blogdown` _Insert Image_ RStudio addin to add an external image.
+In this graph, we looked at the sleep patterns of animals depending on their feeding type.
 
-Another way: use a code chunk, if you already have the image downloaded and ready. Place the image in the **same folder** as this Post, and link to it with the chunk below:
+<img src="unnamed-chunk-1-1.png" width="480" />
 
-<img src="./default.jpg" width="100%" />
 
-### Narrative Text and Futher Code chunks
 
-Start typing/pasting text here.
+### **Looking at connections between characters of your favorite show:**
 
-Diamonds are forever. We can see that from this graph below:
+The graph below shows the different human relationships in the show, Rick & Morty. 
 
-<img src="unnamed-chunk-2-1.png" width="480" />
 
+
+
+
+
+<img src="3d.aesthetics-using-ggraph-Modify-1.png" width="480" />
+
+<img src="faceting-1.png" width="480" />
+
+### **Reflections:**
+
+At first, coding may seem rather complex and blood-curdling. However, it isn't really the case. I do admit, it's got a small learning curve but it isn't rocket science. The things achieved from a single line of code is quite mind-boggling! The fact that one can tell stories, identify data, plot maps and find relationships and networks using simple codes, makes the whole learning process worth it.
+
+The graphs above are only a small fragment of what can be achieved. In two weeks, we've been able to learn a lot about coding, plotting graphs and even making maps! 
+
+
+
+</font size="3">
 

@@ -16,8 +16,7 @@ output:
     fig_width: 5
     fig_height: 5
     keep_md: yes
-description: This is an analysis of the family relationships in Game of Thrones, using
-  R. **EDIT THIS**.
+description: This is the portfolio of Lakshya Pratap.
 ---
 
 
@@ -25,42 +24,123 @@ description: This is an analysis of the family relationships in Game of Thrones,
 knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
 ## Load frequently used packages for blog posts
 library(tidyverse)
+library(extrafont)
+loadfonts()
+library(tidyverse)
+library(igraph)
+library(netrankr)
+library(tidygraph)
+library(ggraph)
+library(graphlayouts)
+library(igraphdata)
+library(downloadthis)
+library(RColorBrewer)
+library(osmplotr)
+library(tmap)
 ```
 
-## Instructions
-
-Delete all of this and paste in your own content right here!!
-
-### Portfolio File Format
-
-To create a new Portfolio entry, make sure that you selected `R Markdown (.Rmd)` as the _format_ option of the post when using the `New Post` `blogdown` addin.
-
-### Setup chunk
-
-Make sure you edit the setup chunk above and bring in **all** packages you need using *r library(package_name)*. 
-
-
-### Inserting a Custom image in your Post
-
-The easiest option is to use the `blogdown` _Insert Image_ RStudio addin to add an external image.
-
-Another way: use a code chunk, if you already have the image downloaded and ready. Place the image in the **same folder** as this Post, and link to it with the chunk below:
-
-```{r echo=FALSE, out.width='100%', fig.align = "centre"}
-knitr::include_graphics('./default.jpg')
-```
-
-### Narrative Text and Futher Code chunks
-
-Start typing/pasting text here.
-
-Diamonds are forever. We can see that from this graph below:
 
 ```{r}
-diamonds %>% 
-   ggplot(aes(x = carat, y = price, color = cut)) + 
-   geom_point(alpha = 0.1)
-   
+bbox <- osmplotr::get_bbox(c(73.02,26.25,73.15,26.35))
+bbox
+
+bbox_l <- osmdata::getbb("Jodhpur, India")
+bbox_l
+
+bbox_p <- prettymapr::searchbbox("Jodhpur")
+bbox_p
+```
+
+```{r}
+bbox_jodhpur <- prettymapr::searchbbox(querystring = "Jodhpur, India")
+```
+
+
+```{r}
+bbox
+bbox_l
+bbox_p
+```
+
+
+```{r}
+dat_B <- extract_osm_objects (key = "building", bbox = bbox) 
+dat_H <- extract_osm_objects (key = 'highway', bbox = bbox)
+dat_P <- extract_osm_objects (key = 'park', bbox = bbox)
+dat_G <- extract_osm_objects (key = 'landuse', value = 'grass', bbox = bbox)
+dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox)
+```
+
+
+```{r}
+dat_R <- extract_osm_objects(bbox = bbox, 
+                             key = "amenity", 
+                             value = "restaurant", 
+                             return_type = "point") #<<
+```
+
+
+
+
+
+# Graph 1: Bar Graph from Lab 03, Midwest Database
+## This graph shows that which state in the Midwest consists of what kind of categories.
+```{r}
+ggplot(midwest) + geom_bar(aes(x= state, fill= category), position = "stack")
+```
+
+# Map Of My City Jodhpur & Its famous Places/ Restaurants
+## Map from Lab 06
+```{r}
+#01
+tm_shape(dat_B) + tm_fill(col = "blue") +
+  
+#02
+  tm_shape(dat_H) + tm_lines(col = "green", lwd = 1)
+
+#03
+  tm_shape(dat_R) + tm_dots(size = 1, col = "pink", shape = 21) + tm_text("name", auto.placement = TRUE) + tm_compass(type = "rose", position = c("right", "top"))
+ 
+```
+
+
+```{r}
+narcos_nodes <- read_csv("./Data/narcos-nodes.csv")
+narcos_edges <- read_csv("./Data/narcos-edges.csv")
+narcos_nodes
+narcos_edges
+```
+```{r}
+ga <- tbl_graph(nodes = narcos_nodes, 
+                edges = narcos_edges, 
+                directed = FALSE)
+ga
+```
+
+# 1. The Graph from my favourite TV Show: Narcos
+## Graph from the learnings of Lab 07
+```{r}
+ggraph(ga, layout = "linear", circular = TRUE) + 
+  geom_edge_arc(aes(), alpha = 0.8) + 
+  scale_edge_width(range = c(0.2, 2)) +
+  geom_node_point(size = 4,colour = "red") + 
+  geom_node_text(aes(label = name),repel = TRUE, size = 3,
+                 max.overlaps = 20) +
+  labs(edge_width = "Weight") +
+  theme_graph()+
+  theme(legend.position = "right", 
+        aspect.ratio = 1)
+```
+
+# Graph 2 from the same TV show. 
+## showing the relationship between the characters
+```{r}
+set_graph_style()
+
+ggraph(ga,layout = "linear", circular = TRUE) + 
+  geom_edge_link(aes(color = type)) + 
+  geom_node_point() +
+  facet_edges(~ type)
 ```
 
 

@@ -63,4 +63,10 @@ diamonds %>%
    
 ```
 
+```{r}
+diamonds
+
+ggplot(data = diamonds, mapping = aes(x = price, y = color, fill = color, color = color, alpha = 0.3))+
+geom_point(size = 0.01)
+```
 
