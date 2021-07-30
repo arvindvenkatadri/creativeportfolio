@@ -21,17 +21,12 @@ description: This is my journey exploring maps, graphs and networks!
 ```{r setup, include=FALSE}
 
 knitr::opts_chunk$set(echo = TRUE)
-
-library(extrafont)
-loadfonts()
 library(tidyverse)
 library(igraph)
-library(netrankr)
 library(tidygraph)
 library(ggraph)
-library(graphlayouts)
-library(igraphdata)
-library(downloadthis)
+library(osmplotr)
+library(tmap)
 library(RColorBrewer)
 
 ```
@@ -59,7 +54,7 @@ ggplot(diamonds) + geom_point(aes(x = clarity, y = price, color = cut), size = 3
 bbox <- osmplotr::get_bbox(c(77.10,28.66,77.17,28.70))
 
 bbox_l <- osmdata::getbb("Delhi, India") 
-bbox_p <- prettymapr::searchbbox("Delhi") 
+#bbox_p <- prettymapr::searchbbox("Delhi, India") 
 
 ```
 
@@ -93,10 +88,11 @@ tmap_mode("plot")
 tm_shape(dat_B) + tm_bubbles(col = "red") +
   
 #2
-  tm_shape(dat_H) + tm_lines(col = "black", lwd = 1) 
+  tm_shape(dat_H) + tm_lines(col = "black", lwd = 1) +
 
 #3
-  tm_shape(dat_R) + tm_dots(size = 3, col = "yellow", shape = 21) + tm_text("name", auto.placement = TRUE) + tm_compass(type = "rose", position = c("right", "top")) + tm_scale_bar(width = 1, position = c("right", "bottom")) + 
+  tm_shape(dat_R) + tm_dots(size = 3, col = "yellow", shape = 21) + tm_text("name", auto.placement = TRUE) + 
+  tm_compass(type = "rose", position = c("right", "top")) + tm_scale_bar(width = 1, position = c("right", "bottom")) + 
    labs(title = "It's a bloody red city")
   
 ```
@@ -162,46 +158,8 @@ ga %>%
 
 
 
-```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
-knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
-## Load frequently used packages for blog posts
-library(tidyverse)
-```
-
-## Instructions
-
-Delete all of this and paste in your own content right here!!
-
-### Portfolio File Format
-
-To create a new Portfolio entry, make sure that you selected `R Markdown (.Rmd)` as the _format_ option of the post when using the `New Post` `blogdown` addin.
-
-### Setup chunk
-
-Make sure you edit the setup chunk above and bring in **all** packages you need using *r library(package_name)*. 
 
 
-### Inserting a Custom image in your Post
 
-The easiest option is to use the `blogdown` _Insert Image_ RStudio addin to add an external image.
-
-Another way: use a code chunk, if you already have the image downloaded and ready. Place the image in the **same folder** as this Post, and link to it with the chunk below:
-
-```{r echo=FALSE, out.width='100%', fig.align = "centre"}
-knitr::include_graphics('./default.jpg')
-```
-
-### Narrative Text and Futher Code chunks
-
-Start typing/pasting text here.
-
-Diamonds are forever. We can see that from this graph below:
-
-```{r}
-diamonds %>% 
-   ggplot(aes(x = carat, y = price, color = cut)) + 
-   geom_point(alpha = 0.1)
-   
-```
 
 
