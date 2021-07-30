@@ -25,18 +25,16 @@ knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FA
 ## Load frequently used packages for blog posts
 library(tidyverse)
 library(osmdata)
-library(rnaturalearth)
+
 library(prettymapr)
 library(osmplotr)
 library(tmap)
 library(sf)
-library(extrafont)
+
 library(igraph)
-library(netrankr)
+library(tidygraph)
 library(ggraph)
-library(graphlayouts)
-library(igraphdata)
-library(downloadthis)
+
 ```
 
 
@@ -69,14 +67,8 @@ h4.date {
 
 <br>
 
-## **Height and Weight of the Heroes along with their Hair colour**
+## Height and Weight of the Heroes along with their Hair colour
 
-```{r}
-library(tidygraph)
-library(dplyr)
-library(readr)
-library(tidyverse)
-```
 
 ```{r echo=FALSE}
 
@@ -86,13 +78,13 @@ heroes <- read_csv("./Data_Jayaditya/heroes.csv")
 
 ```{r}
 
-heroes
+#heroes
 glimpse(heroes)
 ```
 
 ```{r}
 heroes %>% 
-  slice_sample(prop = 0.2) %>% 
+  #slice_sample(prop = 0.2) %>% 
   ggplot(.) +
   geom_point(aes(x = Height, y = Weight, colour = Haircolor), size = 3, alpha = 0.2) +
                scale_colour_viridis_d(option = "inferno") +
@@ -107,13 +99,14 @@ heroes %>%
 
 <br>
 
-## **Restaurants in Madhapur, Hyderabad**
+## Restaurants in Madhapur, Hyderabad
 
-### ***My Heart is in Hyd, Hyd is for Food***
+***My Heart is in Hyd, Hyd is for Food***
 
 ```{r}
-bbox_hyd <- prettymapr::searchbbox(querystring = "Madhapur, Hyderabad, India")
-bbox_hyd <- searchbbox("Madhapur, Hyderabad, India")
+
+bbox_hyd <- getbb("Madhapur, Hyderabad, India")
+bbox_hyd
 ```
 
 ```{r}
@@ -202,7 +195,7 @@ tm_tiles("My Heart is in Hyd, Hyd is food") +
 
 <br>
 
-## **Connections between the characters**
+## Connections between the characters
 
 ### ![***The Boys***](https://www.militarypress.com/wp-content/uploads/2020/07/the-boys.jpg)
 
