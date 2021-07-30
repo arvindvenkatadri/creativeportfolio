@@ -28,6 +28,8 @@ library(tidyverse)
 library(osmplotr) 
 library(tmap) 
 library(sf)
+library(tidygraph)
+library(ggraph)
 ```
 
 ## 3 of my favourite graphs
@@ -74,8 +76,12 @@ tm_layout(title = "Bangalore", title.size = 6, frame = TRUE, frame.lwd = 5, bg.c
 ### Network Graph
 
 ```{r read data, indlude = FALSE}
-bojack_nodes <- read_csv("./Data/bojack-nodes.csv" )
-bojack_edges <- read_csv("./Data/bojack-edges.csv")
+bojack_nodes <- read_csv("./Data/bojack-nodes.csv",trim_ws = TRUE) %>% 
+  select(1:4) %>% 
+  drop_na()
+bojack_edges <- read_csv("./Data/bojack-edges.csv",trim_ws = TRUE)%>% 
+  select(1:4) %>% 
+  drop_na()
 bojack_nodes
 bojack_edges
 ```
@@ -85,6 +91,10 @@ bojack_edges
     This graph shows the connections/interactions between characters appearing in Season 1, Episode 12 of Bojack Horseman.
 
 ```{r}
+bojack <- tbl_graph(nodes = bojack_nodes, 
+                    edges = bojack_edges,
+                    directed = FALSE)
+
 ggraph(graph = bojack,  layout = "kk") +
 geom_edge_link(width = 2, color = "black") +
 geom_node_point(shape = 21, size = 8, fill = "pink", color = "red", stroke = 2) 
