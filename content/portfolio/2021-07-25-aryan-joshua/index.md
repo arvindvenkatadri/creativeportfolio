@@ -34,16 +34,16 @@ I have chosen the diamond data set which contains the prices and other attribute
 ```
 ## Rows: 53,940
 ## Columns: 10
-## $ carat   <dbl> 0.23, 0.21, 0.23, 0.29, 0.31, 0.24, 0.24, 0.26, 0.22, 0.23, 0.~
-## $ cut     <ord> Ideal, Premium, Good, Premium, Good, Very Good, Very Good, Ver~
-## $ color   <ord> E, E, E, I, J, J, I, H, E, H, J, J, F, J, E, E, I, J, J, J, I,~
-## $ clarity <ord> SI2, SI1, VS1, VS2, SI2, VVS2, VVS1, SI1, VS2, VS1, SI1, VS1, ~
-## $ depth   <dbl> 61.5, 59.8, 56.9, 62.4, 63.3, 62.8, 62.3, 61.9, 65.1, 59.4, 64~
-## $ table   <dbl> 55, 61, 65, 58, 58, 57, 57, 55, 61, 61, 55, 56, 61, 54, 62, 58~
-## $ price   <int> 326, 326, 327, 334, 335, 336, 336, 337, 337, 338, 339, 340, 34~
-## $ x       <dbl> 3.95, 3.89, 4.05, 4.20, 4.34, 3.94, 3.95, 4.07, 3.87, 4.00, 4.~
-## $ y       <dbl> 3.98, 3.84, 4.07, 4.23, 4.35, 3.96, 3.98, 4.11, 3.78, 4.05, 4.~
-## $ z       <dbl> 2.43, 2.31, 2.31, 2.63, 2.75, 2.48, 2.47, 2.53, 2.49, 2.39, 2.~
+## $ carat   <dbl> 0.23, 0.21, 0.23, 0.29, 0.31, 0.24, 0.24, 0.26, 0.22, 0.23, 0.…
+## $ cut     <ord> Ideal, Premium, Good, Premium, Good, Very Good, Very Good, Ver…
+## $ color   <ord> E, E, E, I, J, J, I, H, E, H, J, J, F, J, E, E, I, J, J, J, I,…
+## $ clarity <ord> SI2, SI1, VS1, VS2, SI2, VVS2, VVS1, SI1, VS2, VS1, SI1, VS1, …
+## $ depth   <dbl> 61.5, 59.8, 56.9, 62.4, 63.3, 62.8, 62.3, 61.9, 65.1, 59.4, 64…
+## $ table   <dbl> 55, 61, 65, 58, 58, 57, 57, 55, 61, 61, 55, 56, 61, 54, 62, 58…
+## $ price   <int> 326, 326, 327, 334, 335, 336, 336, 337, 337, 338, 339, 340, 34…
+## $ x       <dbl> 3.95, 3.89, 4.05, 4.20, 4.34, 3.94, 3.95, 4.07, 3.87, 4.00, 4.…
+## $ y       <dbl> 3.98, 3.84, 4.07, 4.23, 4.35, 3.96, 3.98, 4.11, 3.78, 4.05, 4.…
+## $ z       <dbl> 2.43, 2.31, 2.31, 2.63, 2.75, 2.48, 2.47, 2.53, 2.49, 2.39, 2.…
 ```
 
 ```
@@ -135,7 +135,7 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 
 
 ```
-## # A tibble: 29 x 5
+## # A tibble: 29 × 5
 ##       id names               sex   occupation       `hair color`
 ##    <dbl> <chr>               <chr> <chr>            <chr>       
 ##  1     1 Homer Simpson       M     Safety Inspector None        
@@ -148,11 +148,11 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 ##  8     8 Terri Mackleberry   F     Student          Purple      
 ##  9     9 Martin Prince       M     Student          Blonde      
 ## 10    10 Otto Mann           M     Bus Driver       Black       
-## # ... with 19 more rows
+## # … with 19 more rows
 ```
 
 ```
-## # A tibble: 44 x 5
+## # A tibble: 44 × 5
 ##     from    to weight relationship `dialogues exchanged`
 ##    <dbl> <dbl>  <dbl> <chr>                        <dbl>
 ##  1     1     5      8 family                           5
@@ -165,7 +165,7 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 ##  8     9     6      3 friends                          1
 ##  9    10     6      1 acquaintance                     1
 ## 10    10     7      1 acquaintance                     1
-## # ... with 34 more rows
+## # … with 34 more rows
 ```
 
 
@@ -177,7 +177,7 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 ## #
 ## # An undirected simple graph with 1 component
 ## #
-## # Node Data: 29 x 5 (active)
+## # Node Data: 29 × 5 (active)
 ##      id names               sex   occupation       `hair color`
 ##   <dbl> <chr>               <chr> <chr>            <chr>       
 ## 1     1 Homer Simpson       M     Safety Inspector None        
@@ -186,21 +186,21 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 ## 4     4 Bart Simpson        M     Student          Blonde      
 ## 5     5 Lisa Simpson        F     Student          Blonde      
 ## 6     6 Milhouse Van Houten M     Student          Blue        
-## # ... with 23 more rows
+## # … with 23 more rows
 ## #
-## # Edge Data: 44 x 5
+## # Edge Data: 44 × 5
 ##    from    to weight relationship `dialogues exchanged`
 ##   <int> <int>  <dbl> <chr>                        <dbl>
 ## 1     1     5      8 family                           5
 ## 2     4     6      9 friends                         10
 ## 3     4     5      6 family                           3
-## # ... with 41 more rows
+## # … with 41 more rows
 ```
 
 ### VisNetwork Data
 
 ```
-## # A tibble: 29 x 5
+## # A tibble: 29 × 5
 ##       id names               sex   occupation       `hair color`
 ##    <dbl> <chr>               <chr> <chr>            <chr>       
 ##  1     1 Homer Simpson       M     Safety Inspector None        
@@ -213,11 +213,11 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 ##  8     8 Terri Mackleberry   F     Student          Purple      
 ##  9     9 Martin Prince       M     Student          Blonde      
 ## 10    10 Otto Mann           M     Bus Driver       Black       
-## # ... with 19 more rows
+## # … with 19 more rows
 ```
 
 ```
-## # A tibble: 44 x 5
+## # A tibble: 44 × 5
 ##     from    to weight relationship `dialogues exchanged`
 ##    <dbl> <dbl>  <dbl> <chr>                        <dbl>
 ##  1     1     5      8 family                           5
@@ -230,11 +230,11 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 ##  8     9     6      3 friends                          1
 ##  9    10     6      1 acquaintance                     1
 ## 10    10     7      1 acquaintance                     1
-## # ... with 34 more rows
+## # … with 34 more rows
 ```
 
 ```
-## # A tibble: 29 x 5
+## # A tibble: 29 × 5
 ##       id label               sex   occupation       group 
 ##    <dbl> <chr>               <chr> <chr>            <chr> 
 ##  1     1 Homer Simpson       M     Safety Inspector None  
@@ -247,11 +247,11 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 ##  8     8 Terri Mackleberry   F     Student          Purple
 ##  9     9 Martin Prince       M     Student          Blonde
 ## 10    10 Otto Mann           M     Bus Driver       Black 
-## # ... with 19 more rows
+## # … with 19 more rows
 ```
 
 ```
-## # A tibble: 44 x 5
+## # A tibble: 44 × 5
 ##     from    to weight relationship `dialogues exchanged`
 ##    <dbl> <dbl>  <dbl> <chr>                        <dbl>
 ##  1     1     5      8 family                           5
@@ -264,7 +264,7 @@ I have decided to use The Simpsons as the show I will be using for the networks 
 ##  8     9     6      3 friends                          1
 ##  9    10     6      1 acquaintance                     1
 ## 10    10     7      1 acquaintance                     1
-## # ... with 34 more rows
+## # … with 34 more rows
 ```
 
 ### Interactive Network Based on Hair Colour of the Characters
@@ -273,8 +273,13 @@ I have plotted an interactive map that shows all the characters and how they're 
 
 
 ```{=html}
+<<<<<<< HEAD
+<div id="htmlwidget-932fd99b4b9bdbb94477" style="width:480px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-932fd99b4b9bdbb94477">{"x":{"nodes":{"id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],"label":["Homer Simpson","Marge Simpson","Maggie Simpson","Bart Simpson","Lisa Simpson","Milhouse Van Houten","Sherri Mackleberry","Terri Mackleberry","Martin Prince","Otto Mann","Charles Montgomery Burns","Waylon Smithers, Jr","Carlton Carlson","Lenny Leonard","Apu Nahasapeemapetilon","Kent Brockman","Moe Szyslak","Barney Gumble","Abraham Simpson","Jasper Beardsley","Jonathan Frink","Seymour Skinner","Magic Johnson","Aristotle Amadopolis","Luann Van Houten","Snake Jailbird","Clancy Wiggum","Scott Christian","Ralph Wiggum"],"sex":["M","F","F","M","F","M","F","F","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","F","M","M","M","M"],"occupation":["Safety Inspector","Homemaker","Baby","Student","Student","Student","Student","Student","Student","Bus Driver","Nuclear Plant Owner","Assissant","Safety Operations Supervisor","Technical Supervisor","Kwik-e-Mart Owner","News Anchorman","Bartender","Human Guinea Pig","War Veteran","War Veteran","Scientist","Principal","Basketball Player","Nuclear Plant Owner","Homemaker","Criminal","Chief of Police","News Anchorman","Student"],"group":["None","Blue","Blonde","Blonde","Blonde","Blue","Purple","Purple","Blonde","Black","None","Grey","Brown","Black","Black","White","Grey","Brown","Blonde","White","Brown","Grey","Black","White","Blue","Brown","Blue","Black","Blue"]},"edges":{"from":[1,4,4,7,8,7,8,9,10,10,10,10,11,1,1,10,10,16,17,19,21,22,1,23,1,4,24,24,4,4,25,18,17,17,18,28,2,5,5,6,26,19,29,10],"to":[5,6,5,4,4,6,6,6,6,7,8,9,12,13,14,15,4,11,18,20,16,5,11,1,2,1,1,11,3,2,2,5,5,1,1,16,3,3,2,25,27,1,27,29],"weight":[8,9,6,2,2,3,3,3,1,1,1,1,7,4,4,3,5,1,3,5,1,2,2,1,9,6,1,1,7,8,5,1,1,5,3,1,8,8,8,8,2,5,8,1],"relationship":["family","friends","family","friends","friends","friends","friends","friends","acquaintance","acquaintance","acquaintance","acquaintance","boss","friends","friends","acquaintance","friends","acquaintance","friends","friends","acquaintance","teacher","boss","celebrity","family","family","colleagues","colleagues","family","family","friends","acquaintance","acquaintance","friends","friends","colleagues","family","family","family","family","colleagues","family","family","acquaintance"],"dialogues.exchanged":[5,10,3,1,1,1,1,1,1,1,1,1,12,3,3,2,2,3,4,2,1,2,3,2,3,2,4,2,3,5,3,3,2,1,2,1,0,1,1,0,1,0,0,1]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","font":{"size":30}},"manipulation":{"enabled":false},"groups":{"None":{"shape":"icon","icon":{"code":"f182","size":75,"color":"grey"},"shadow":{"enabled":true}},"Blue":{"shape":"icon","icon":{"code":"f182","size":75,"color":"blue"},"shadow":{"enabled":true}},"Blonde":{"shape":"icon","icon":{"code":"f182","size":75,"color":"yellow"},"shadow":{"enabled":true}},"Purple":{"shape":"icon","icon":{"code":"f182","size":75,"color":"purple"},"shadow":{"enabled":true}},"Black":{"shape":"icon","icon":{"code":"f182","size":75,"color":"black"},"shadow":{"enabled":true}},"Brown":{"shape":"icon","icon":{"code":"f182","size":75,"color":"brown"},"shadow":{"enabled":true}},"Grey":{"shape":"icon","icon":{"code":"f182","size":75,"color":"dark grey"},"shadow":{"enabled":true}},"useDefaultGroups":true,"White":{"shape":"icon","icon":{"code":"f182","size":75,"color":"white"},"shadow":{"enabled":true}}},"interaction":{"hover":true,"hoverConnectedEdges":true,"navigationButtons":true,"selectConnectedEdges":true,"zoomView":true}},"groups":["None","Blue","Blonde","Purple","Black","Grey","Brown","White"],"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":{"text":"Hair Colour of all the Characters","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":{"text":"The Simpsons","style":"font-family:Georgia, Times New Roman, Times, serif;font-size:12px;text-align:center;"},"footer":null,"background":"lightblue","iconsRedraw":true,"legend":{"width":0.2,"useGroups":true,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+=======
 <div id="htmlwidget-53a389673aa04b81c49a" style="width:480px;height:480px;" class="visNetwork html-widget"></div>
 <script type="application/json" data-for="htmlwidget-53a389673aa04b81c49a">{"x":{"nodes":{"id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],"label":["Homer Simpson","Marge Simpson","Maggie Simpson","Bart Simpson","Lisa Simpson","Milhouse Van Houten","Sherri Mackleberry","Terri Mackleberry","Martin Prince","Otto Mann","Charles Montgomery Burns","Waylon Smithers, Jr","Carlton Carlson","Lenny Leonard","Apu Nahasapeemapetilon","Kent Brockman","Moe Szyslak","Barney Gumble","Abraham Simpson","Jasper Beardsley","Jonathan Frink","Seymour Skinner","Magic Johnson","Aristotle Amadopolis","Luann Van Houten","Snake Jailbird","Clancy Wiggum","Scott Christian","Ralph Wiggum"],"sex":["M","F","F","M","F","M","F","F","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","F","M","M","M","M"],"occupation":["Safety Inspector","Homemaker","Baby","Student","Student","Student","Student","Student","Student","Bus Driver","Nuclear Plant Owner","Assissant","Safety Operations Supervisor","Technical Supervisor","Kwik-e-Mart Owner","News Anchorman","Bartender","Human Guinea Pig","War Veteran","War Veteran","Scientist","Principal","Basketball Player","Nuclear Plant Owner","Homemaker","Criminal","Chief of Police","News Anchorman","Student"],"group":["None","Blue","Blonde","Blonde","Blonde","Blue","Purple","Purple","Blonde","Black","None","Grey","Brown","Black","Black","White","Grey","Brown","Blonde","White","Brown","Grey","Black","White","Blue","Brown","Blue","Black","Blue"]},"edges":{"from":[1,4,4,7,8,7,8,9,10,10,10,10,11,1,1,10,10,16,17,19,21,22,1,23,1,4,24,24,4,4,25,18,17,17,18,28,2,5,5,6,26,19,29,10],"to":[5,6,5,4,4,6,6,6,6,7,8,9,12,13,14,15,4,11,18,20,16,5,11,1,2,1,1,11,3,2,2,5,5,1,1,16,3,3,2,25,27,1,27,29],"weight":[8,9,6,2,2,3,3,3,1,1,1,1,7,4,4,3,5,1,3,5,1,2,2,1,9,6,1,1,7,8,5,1,1,5,3,1,8,8,8,8,2,5,8,1],"relationship":["family","friends","family","friends","friends","friends","friends","friends","acquaintance","acquaintance","acquaintance","acquaintance","boss","friends","friends","acquaintance","friends","acquaintance","friends","friends","acquaintance","teacher","boss","celebrity","family","family","colleagues","colleagues","family","family","friends","acquaintance","acquaintance","friends","friends","colleagues","family","family","family","family","colleagues","family","family","acquaintance"],"dialogues.exchanged":[5,10,3,1,1,1,1,1,1,1,1,1,12,3,3,2,2,3,4,2,1,2,3,2,3,2,4,2,3,5,3,3,2,1,2,1,0,1,1,0,1,0,0,1]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","font":{"size":30}},"manipulation":{"enabled":false},"groups":{"None":{"shape":"icon","icon":{"code":"f182","size":75,"color":"grey"},"shadow":{"enabled":true}},"Blue":{"shape":"icon","icon":{"code":"f182","size":75,"color":"blue"},"shadow":{"enabled":true}},"Blonde":{"shape":"icon","icon":{"code":"f182","size":75,"color":"yellow"},"shadow":{"enabled":true}},"Purple":{"shape":"icon","icon":{"code":"f182","size":75,"color":"purple"},"shadow":{"enabled":true}},"Black":{"shape":"icon","icon":{"code":"f182","size":75,"color":"black"},"shadow":{"enabled":true}},"Brown":{"shape":"icon","icon":{"code":"f182","size":75,"color":"brown"},"shadow":{"enabled":true}},"Grey":{"shape":"icon","icon":{"code":"f182","size":75,"color":"dark grey"},"shadow":{"enabled":true}},"useDefaultGroups":true,"White":{"shape":"icon","icon":{"code":"f182","size":75,"color":"white"},"shadow":{"enabled":true}}},"interaction":{"hover":true,"hoverConnectedEdges":true,"navigationButtons":true,"selectConnectedEdges":true,"zoomView":true}},"groups":["None","Blue","Blonde","Purple","Black","Grey","Brown","White"],"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":{"text":"Hair Colour of all the Characters","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":{"text":"The Simpsons","style":"font-family:Georgia, Times New Roman, Times, serif;font-size:12px;text-align:center;"},"footer":null,"background":"lightblue","iconsRedraw":true,"legend":{"width":0.2,"useGroups":true,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+>>>>>>> 4b5aec14eef4785cc57642d948bbd2d0bf987a0b
 ```
 
 
