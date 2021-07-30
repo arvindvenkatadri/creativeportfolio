@@ -25,6 +25,8 @@ description: This is an analysis of the family relationships in Game of Thrones,
 knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
 ## Load frequently used packages for blog posts
 library(tidyverse)
+library(spData)
+library(RColorBrewer)
 ```
 
 ## Instructions
@@ -63,4 +65,11 @@ diamonds %>%
    
 ```
 
-
+```{r G3}
+ggplot(msleep) + 
+    geom_density(aes(x = awake, 
+                 color = vore, 
+                 fill = vore), 
+                 alpha = 0.3) +
+  labs(title = "Points plotted with Alpha")
+```
