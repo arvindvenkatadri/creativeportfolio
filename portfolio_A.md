@@ -16,8 +16,7 @@ output:
     fig_width: 5
     fig_height: 5
     keep_md: yes
-description: This is an analysis of the family relationships in Game of Thrones, using
-  R. **EDIT THIS**.
+description: These are some of the best works from this course.
 ---
 
 
