@@ -61,18 +61,18 @@ h4.date {
 
 ```
 ## # A tibble: 817 x 25
-##       X1 name    Gender Eyecolor Race     Haircolor Height Publisher   Skincolor
-##    <dbl> <chr>   <chr>  <chr>    <chr>    <chr>      <dbl> <chr>       <chr>    
-##  1     0 A-Bomb  Male   yellow   Human    No Hair      203 Marvel Com~ -        
-##  2     1 Abe Sa~ Male   blue     Icthyo ~ No Hair      191 Dark Horse~ blue     
-##  3     2 Abin S~ Male   blue     Ungaran  No Hair      185 DC Comics   red      
-##  4     3 Abomin~ Male   green    Human /~ No Hair      203 Marvel Com~ -        
-##  5     4 Abraxas Male   blue     Cosmic ~ Black        -99 Marvel Com~ -        
-##  6     5 Absorb~ Male   blue     Human    No Hair      193 Marvel Com~ -        
-##  7     6 Adam M~ Male   blue     -        Blond        -99 NBC - Hero~ -        
-##  8     7 Adam S~ Male   blue     Human    Blond        185 DC Comics   -        
-##  9     8 Agent ~ Female blue     -        Blond        173 Marvel Com~ -        
-## 10     9 Agent ~ Male   brown    Human    Brown        178 Marvel Com~ -        
+##     ...1 name          Gender Eyecolor Race  Haircolor Height Publisher Skincolor
+##    <dbl> <chr>         <chr>  <chr>    <chr> <chr>      <dbl> <chr>     <chr>    
+##  1     0 A-Bomb        Male   yellow   Human No Hair      203 Marvel C~ -        
+##  2     1 Abe Sapien    Male   blue     Icth~ No Hair      191 Dark Hor~ blue     
+##  3     2 Abin Sur      Male   blue     Unga~ No Hair      185 DC Comics red      
+##  4     3 Abomination   Male   green    Huma~ No Hair      203 Marvel C~ -        
+##  5     4 Abraxas       Male   blue     Cosm~ Black        -99 Marvel C~ -        
+##  6     5 Absorbing Man Male   blue     Human No Hair      193 Marvel C~ -        
+##  7     6 Adam Monroe   Male   blue     -     Blond        -99 NBC - He~ -        
+##  8     7 Adam Strange  Male   blue     Human Blond        185 DC Comics -        
+##  9     8 Agent 13      Female blue     -     Blond        173 Marvel C~ -        
+## 10     9 Agent Bob     Male   brown    Human Brown        178 Marvel C~ -        
 ## # ... with 807 more rows, and 16 more variables: Alignment <chr>, Weight <dbl>,
 ## #   intelligence <chr>, strength <chr>, speed <chr>, durability <chr>,
 ## #   power <chr>, combat <chr>, mindcontrol <chr>, mattermanipulation <chr>,
@@ -83,7 +83,7 @@ h4.date {
 ```
 ## Rows: 817
 ## Columns: 25
-## $ X1                 <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1~
+## $ ...1               <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1~
 ## $ name               <chr> "A-Bomb", "Abe Sapien", "Abin Sur", "Abomination", ~
 ## $ Gender             <chr> "Male", "Male", "Male", "Male", "Male", "Male", "Ma~
 ## $ Eyecolor           <chr> "yellow", "blue", "blue", "green", "blue", "blue", ~
@@ -342,7 +342,7 @@ h4.date {
 
 ## **Connections between the characters**
 
-### ![***The Boys***](https://www.bing.com/images/search?view=detailV2&ccid=fdNohgbk&id=19EB01443FEB0B09309C0A8C6E8991B5F8E68551&thid=OIP.fdNohgbkMT7fmMMTYWpu1wHaFj&mediaurl=https%3a%2f%2fwww.militarypress.com%2fwp-content%2fuploads%2f2020%2f07%2fthe-boys.jpg&exph=1920&expw=2560&q=the+boys&simid=608030815051864371&FORM=IRPRST&ck=EC8C96F1C89A66D0723291AEB862965F&selectedIndex=1&ajaxhist=0&ajaxserp=0)
+### ![***The Boys***](https://www.militarypress.com/wp-content/uploads/2020/07/the-boys.jpg)
 
 
 
