@@ -342,7 +342,7 @@ h4.date {
 
 ## **Connections between the characters**
 
-### ![***The Boys***](https://www.bing.com/images/search?view=detailV2&ccid=fdNohgbk&id=19EB01443FEB0B09309C0A8C6E8991B5F8E68551&thid=OIP.fdNohgbkMT7fmMMTYWpu1wHaFj&mediaurl=https%3a%2f%2fwww.militarypress.com%2fwp-content%2fuploads%2f2020%2f07%2fthe-boys.jpg&exph=1920&expw=2560&q=the+boys&simid=608030815051864371&FORM=IRPRST&ck=EC8C96F1C89A66D0723291AEB862965F&selectedIndex=1&ajaxhist=0&ajaxserp=0)
+### ![***The Boys***](https://www.militarypress.com/wp-content/uploads/2020/07/the-boys.jpg)
 
 
 

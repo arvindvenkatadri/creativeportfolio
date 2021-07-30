@@ -23,33 +23,151 @@ description: This is an analysis of the family relationships in Game of Thrones,
 
 
 
-## Instructions
-
-Delete all of this and paste in your own content right here!!
-
-### Portfolio File Format
-
-To create a new Portfolio entry, make sure that you selected `R Markdown (.Rmd)` as the _format_ option of the post when using the `New Post` `blogdown` addin.
-
-### Setup chunk
-
-Make sure you edit the setup chunk above and bring in **all** packages you need using *r library(package_name)*. 
 
 
-### Inserting a Custom image in your Post
+```
+##     min   max
+## x 73.02 73.15
+## y 26.25 26.35
+```
 
-The easiest option is to use the `blogdown` _Insert Image_ RStudio addin to add an external image.
+```
+##        min      max
+## x 72.94858 73.08887
+## y 26.20598 26.35367
+```
 
-Another way: use a code chunk, if you already have the image downloaded and ready. Place the image in the **same folder** as this Post, and link to it with the chunk below:
+```
+##        min      max
+## x 72.94858 73.08887
+## y 26.20598 26.35367
+```
 
-<img src="./default.jpg" width="100%" />
 
-### Narrative Text and Futher Code chunks
 
-Start typing/pasting text here.
 
-Diamonds are forever. We can see that from this graph below:
 
-<img src="unnamed-chunk-2-1.png" width="480" />
+```
+##     min   max
+## x 73.02 73.15
+## y 26.25 26.35
+```
+
+```
+##        min      max
+## x 72.94858 73.08887
+## y 26.20598 26.35367
+```
+
+```
+##        min      max
+## x 72.94858 73.08887
+## y 26.20598 26.35367
+```
+
+
+
+
+
+
+
+
+
+
+
+# Graph 1: Bar Graph from Lab 03, Midwest Database
+## This graph shows that which state in the Midwest consists of what kind of categories.
+<img src="unnamed-chunk-6-1.png" width="480" />
+
+# Map Of My City Jodhpur & Its famous Places/ Restaurants
+## Map from Lab 06
+<img src="unnamed-chunk-7-1.png" width="480" /><img src="unnamed-chunk-7-2.png" width="480" />
+
+
+
+```
+## # A tibble: 20 x 6
+##    name                         sex   nationality  race  birthyear season
+##    <chr>                        <chr> <chr>        <chr>     <dbl>  <dbl>
+##  1 Pablo Escobar                M     Colombian    White      1949      2
+##  2 Javier Pena                  M     American     White      1948      3
+##  3 Steve Murphy                 M     American     White      1957      2
+##  4 Gustavo Gaveria              M     Colombian    White      1946      1
+##  5 La Quica                     M     Colombian    Black      1965      2
+##  6 Tata Escobar                 F     Colombian    White      1961      2
+##  7 Valeria Velez                F     Colombian    White      1949      2
+##  8 Luis Fernando Duque          M     Colombian    White      1952      2
+##  9 Gilberto Rodriguez           M     Colombian    White      1939      3
+## 10 Miguel Rodriguez             M     Colombian    White      1943      3
+## 11 Hermilda Gaveria             F     Colombian    White      1917      1
+## 12 Fabio Ochoa                  M     Colombian    White      1957      1
+## 13 Jorge Luis Ochoa             M     Colombian    White      1950      1
+## 14 Carlos Lehder                M     German       White      1949      1
+## 15 El Navegante                 M     Colombian    White      1946      3
+## 16 Cesar Gaveria                M     Colombian    White      1947      3
+## 17 José Gonzalo Rodríguez Gacha M     Puerto Rican Black      1947      1
+## 18 Hugo Martinez                M     Colombian    White      1941      2
+## 19 El Lion                      M     American     White      1969      1
+## 20 Diana Turbay                 F     Colombian    White      1950      2
+```
+
+```
+## # A tibble: 20 x 3
+##    from                         to                  type       
+##    <chr>                        <chr>               <chr>      
+##  1 Pablo Escobar                Tata Escobar        Family     
+##  2 Javier Pena                  Steve Murphy        Partners   
+##  3 Steve Murphy                 Pablo Escobar       Enemies    
+##  4 Gustavo Gaveria              El Lion             Partners   
+##  5 La Quica                     El Lion             Partners   
+##  6 Tata Escobar                 Pablo Escobar       Family     
+##  7 Valeria Velez                Luis Fernando Duque Associates 
+##  8 Luis Fernando Duque          Pablo Escobar       Associates 
+##  9 Gilberto Rodriguez           Miguel Rodriguez    Partners   
+## 10 Miguel Rodriguez             Gilberto Rodriguez  Partners   
+## 11 Hermilda Gaveria             Gustavo Gaveria     Family     
+## 12 Fabio Ochoa                  Jorge Luis Ochoa    Partners   
+## 13 Jorge Luis Ochoa             Fabio Ochoa         Partners   
+## 14 Carlos Lehder                Pablo Escobar       Partners   
+## 15 El Navegante                 Fabio Ochoa         Partners   
+## 16 Cesar Gaveria                Hugo Martinez       Service    
+## 17 José Gonzalo Rodríguez Gacha Pablo Escobar       Assiociates
+## 18 Hugo Martinez                Cesar Gaveria       Service    
+## 19 El Lion                      Gustavo Gaveria     Partners   
+## 20 Diana Turbay                 Cesar Gaveria       Friends
+```
+
+```
+## # A tbl_graph: 20 nodes and 20 edges
+## #
+## # An undirected multigraph with 5 components
+## #
+## # Node Data: 20 x 6 (active)
+##   name            sex   nationality race  birthyear season
+##   <chr>           <chr> <chr>       <chr>     <dbl>  <dbl>
+## 1 Pablo Escobar   M     Colombian   White      1949      2
+## 2 Javier Pena     M     American    White      1948      3
+## 3 Steve Murphy    M     American    White      1957      2
+## 4 Gustavo Gaveria M     Colombian   White      1946      1
+## 5 La Quica        M     Colombian   Black      1965      2
+## 6 Tata Escobar    F     Colombian   White      1961      2
+## # ... with 14 more rows
+## #
+## # Edge Data: 20 x 3
+##    from    to type    
+##   <int> <int> <chr>   
+## 1     1     6 Family  
+## 2     2     3 Partners
+## 3     1     3 Enemies 
+## # ... with 17 more rows
+```
+
+# 1. The Graph from my favourite TV Show: Narcos
+## Graph from the learnings of Lab 07
+<img src="unnamed-chunk-10-1.png" width="480" />
+
+# Graph 2 from the same TV show. 
+## showing the relationship between the characters
+<img src="unnamed-chunk-11-1.png" width="480" />
 
 
