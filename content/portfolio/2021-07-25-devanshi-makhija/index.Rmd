@@ -30,21 +30,20 @@ library(osmplotr)
 library(prettymapr)
 library(sf)
 library(RColorBrewer)
-library(ggplot2)
-library(viridis)
+
+
 library(tmap)
 library(osmdata) 
-library(rnaturalearth)
+
 library(sf)
-library(xaringanExtra)
-library(downloadthis)
-library(extrafont)
-loadfonts()
+
+
+
 library(ggraph)
-library(graphlayouts)
-library(igraphdata)
+
+
 library(igraph)
-library(netrankr)
+
 library(tidygraph)
 ```
 
@@ -104,7 +103,7 @@ dat_khar_G <- extract_osm_objects (bbox = bbox_khar, key = "landuse", value = "c
   tm_markers( col = "blue")+  #cemetery
   tm_text("name", auto.placement = TRUE, size = 1)+ #cemetery
   
-  tm_compass(type = "rose", position = c("right", "top")) +
+  # tm_compass(type = "rose", position = c("right", "top")) +
   
   tm_scale_bar(width = 4, position = c("left", "bottom"), text.size = 1) +
   
@@ -134,29 +133,7 @@ friends_edges
 
 ```
 
-```{r echo=FALSE}
-friends_nodes %>% 
-  download_this(
-    output_name = " Friends Nodes Dataset",
-    output_extension = ".csv",
-    button_label = "Download Friends Nodes as csv",
-    button_type = "default",
-    has_icon = TRUE,
-    icon = "fa fa-save",
-    class = "hvr-sweep-to-left"
-  )
 
-friends_edges %>% 
-  download_this(
-    output_name = "Friends Nodes Dataset",
-    output_extension = ".csv",
-    button_label = "Download Friends Edges data as csv",
-    button_type = "default",
-    has_icon = TRUE,
-    icon = "fa fa-save",
-    class = "hvr-sweep-to-left"
-  )
-```
 
 ### Creating a 'tbl_graph'
 
