@@ -23,33 +23,32 @@ description: This is an analysis of the family relationships in Game of Thrones,
 
 
 
-## Instructions
+### **Graphs explored during the course of this worshop**
 
-Delete all of this and paste in your own content right here!!
-
-### Portfolio File Format
-
-To create a new Portfolio entry, make sure that you selected `R Markdown (.Rmd)` as the _format_ option of the post when using the `New Post` `blogdown` addin.
-
-### Setup chunk
-
-Make sure you edit the setup chunk above and bring in **all** packages you need using *r library(package_name)*. 
+#### **GRAPH- 1**
+Using the diamonds data set to analyse data and create graphs showing the colour and depth of the diamonds. I used a colour palette for this graph as well using ggplot and geom_bar
 
 
-### Inserting a Custom image in your Post
+<img src="unnamed-chunk-1-1.png" width="480" />
 
-The easiest option is to use the `blogdown` _Insert Image_ RStudio addin to add an external image.
+#### **GRAPH- 2**
+Using the penguins data set to analyse data and create graphs showing the island, species and sex of the penguins.
+I have made a code for these graphs- geom_bar with fill 
 
-Another way: use a code chunk, if you already have the image downloaded and ready. Place the image in the **same folder** as this Post, and link to it with the chunk below:
+<img src="unnamed-chunk-2-1.png" width="480" /><img src="unnamed-chunk-2-2.png" width="480" />
 
-<img src="./default.jpg" width="100%" />
+#### **GRAPH- 3**
+Using the diamonds data set to analyse data and create graphs showing the depth, colour and carat of the diamonds. I used a colour palette for this graph using ggplot and geom_point.
 
-### Narrative Text and Futher Code chunks
+<img src="unnamed-chunk-3-1.png" width="480" />
 
-Start typing/pasting text here.
+### **REFLECTION**
 
-Diamonds are forever. We can see that from this graph below:
+This workshop has been a very new and enriching experience for me. Learning a new language and seeing the various outputs using different data sets was interesting. I did find some parts of the workshop a bit challenging but figuring out a way to come around those problems to get to the end result was satisfying. 
 
-<img src="unnamed-chunk-2-1.png" width="480" />
+Personally, my favourite part of the studio was having to hear Arvind’s music playing in the background which definitely made for a good kick start in the morning. The studio was very well curated for one’s understanding. Realizing the various possibilities and outcomes by using just code was fascinating.  
+
+Despite the challenges I came across in this studio, I did find this experience new and interesting so I would love to explore creative coding in the future and this workshop was a great way of instilling that curiosity in me. 
+
 
 
