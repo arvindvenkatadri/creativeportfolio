@@ -30,20 +30,34 @@ description: Anika's Journey using graphs, Mapping and Networks.
 </div>
 <div id="graph-1" class="section level2">
 <h2>Graph 1</h2>
-<p>I used geom_sf to make the graph, it was more fun than i expected. The way graph came up looked satisfying.</p>
-<p>bbox_jaipur &lt;- searchbbox(querystring = “Jaipur, India”)
-dat_jaipur_H &lt;- extract_osm_objects(bbox_jaipur, “highway”)
-dat_jaipur_B &lt;- extract_osm_objects(bbox_jaipur, “building”)
-dat_jaipur_R &lt;- extract_osm_objects(bbox = bbox_jaipur, key = “amenity”, value = “restaurant”, return_type = “point”)</p>
+<p>I used <code>geom_sf</code> to make the graph of Jaipur City, it was more fun than i expected. The way graph came up looked satisfying.</p>
+<pre class="r"><code>bbox_jaipur &lt;- getbb(&quot;Jaipur, India&quot;)
+dat_jaipur_H &lt;- extract_osm_objects(bbox_jaipur, &quot;highway&quot;)</code></pre>
+<pre><code>## Issuing query to Overpass API ...</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
+<pre><code>## Query complete!</code></pre>
+<pre><code>## converting OSM data to sf format</code></pre>
+<pre class="r"><code>dat_jaipur_B &lt;- extract_osm_objects(bbox_jaipur, &quot;building&quot;)</code></pre>
+<pre><code>## Issuing query to Overpass API ...</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
+<pre><code>## Query complete!</code></pre>
+<pre><code>## converting OSM data to sf format</code></pre>
+<pre class="r"><code>dat_jaipur_R &lt;- extract_osm_objects(bbox = bbox_jaipur, key = &quot;amenity&quot;, value = &quot;restaurant&quot;, return_type = &quot;point&quot;)</code></pre>
+<pre><code>## Issuing query to Overpass API ...</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
+<pre><code>## Query complete!</code></pre>
+<pre><code>## converting OSM data to sf format</code></pre>
+<pre class="r"><code>## Using geom_sf()
+ggplot() + 
+  geom_sf(data = dat_jaipur_H, colour = &quot;dodger blue&quot;) + 
+  geom_sf(data = dat_jaipur_B, fill = &quot;orange&quot;) + 
+  geom_sf(data = dat_jaipur_R, colour = &quot;Yellow&quot;, fill = &quot;red&quot;) + 
+  theme(panel.background = element_rect(fill = &quot;palegreen&quot;)) + 
+  labs(title = &quot;Pink City is not so pink anymore&quot;, subtitle = &quot;food is everywhere&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="480" /></p>
 </div>
-<div id="using-geom_sf" class="section level2">
-<h2>Using geom_sf()</h2>
-<p>ggplot() +
-geom_sf(data = dat_jaipur_H, colour = “dodger blue”) +
-geom_sf(data = dat_jaipur_B, fill = “orange”) +
-geom_sf(data = dat_jaipur_R, colour = “Yellow”, fill = “red”) +
-theme(panel.background = element_rect(fill = “palegreen”)) +
-labs(title = “Pink City is not so pink anymore”, subtitle = “food is everywhere”)</p>
+<div id="graph-2" class="section level2">
+<h2>Graph 2</h2>
 <p>This graph is about the sleeping patterns of mammals. I used ggplot to make the graph.
 The fun part about the graph is, it’s also sleeping the way I want to.</p>
 <pre class="r"><code>ggplot(msleep) + 
@@ -51,17 +65,17 @@ The fun part about the graph is, it’s also sleeping the way I want to.</p>
                  color = vore, 
                  fill = vore), 
                  alpha = 0.5)</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="480" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="480" /></p>
 <p>The graph shows the the different sleep patterns.</p>
 <p>This graph is about the the number of hours animals sleep in a day.
 FUN FACT: I don’t get to sleep for 4 hours straight.
 p.s.: These mammals are lucky I must say. huh.</p>
 <pre class="r"><code>ggplot(msleep) + geom_line(aes(sleep_cycle, sleep_total, group= vore, color= vore))</code></pre>
 <pre><code>## Warning: Removed 51 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="480" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="480" /></p>
 </div>
-<div id="graph-2" class="section level2">
-<h2>Graph 2</h2>
+<div id="graph-3" class="section level2">
+<h2>Graph 3</h2>
 <p>This dataset is about the diamonds. Related to color and carat.</p>
 <pre class="r"><code>ggplot(diamonds, 
        mapping = aes(x = color, 
@@ -69,29 +83,19 @@ p.s.: These mammals are lucky I must say. huh.</p>
   geom_point() +
   geom_smooth(method = &quot;lm&quot;)</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="480" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="480" /></p>
 <pre class="r"><code>ggplot(diamonds, 
        mapping = aes(x = carat, 
            y = z)) +
   geom_point() +
   geom_smooth(method = &quot;lm&quot;)</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-2.png" width="480" /></p>
-</div>
-<div id="graph-3" class="section level2">
-<h2>Graph 3</h2>
-<p>This graph is about the names. I used arvind’s name cause idk some error is showing up when i am trying for mine.
-Oh btw i used ggplot to make this plot.</p>
-<pre class="r"><code>plot </code></pre>
-<pre><code>## function (x, y, ...) 
-## UseMethod(&quot;plot&quot;)
-## &lt;bytecode: 0x7febf0031df0&gt;
-## &lt;environment: namespace:base&gt;</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-2.png" width="480" /></p>
 </div>
 <div id="my-course-reflection" class="section level2">
 <h2>My Course Reflection</h2>
 <p>This course was all about patience and sitting still on your chair and work with keen eyes cause one single comma will ruin your whole work.
 It was a fun workshop. Arvind made it much easy than i thought.
 Definitely helped me with the patience thing.</p>
-<p>Thankyou.</p>
+<p>Thank you.</p>
 </div>
