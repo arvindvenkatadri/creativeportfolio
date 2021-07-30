@@ -26,9 +26,9 @@ description: Aditi Garg's website.
 
 > HI!! I'm Aditi and you're going to see a few of my favorite graphs and maps that I made using R Studio.
 
-## Graph 1
+## Graph 1: 
 
-How are characters related to each other?
+How are these **Brooklyn99** characters related to each other?
 
 
 ```
@@ -192,8 +192,8 @@ How are characters related to each other?
 ```
 
 ```{=html}
-<div id="htmlwidget-93a96b5021ce24c08cc1" style="width:480px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-93a96b5021ce24c08cc1">{"x":{"nodes":{"id":[1,2,3,4,5,6,7,8,9],"X":[1,2,3,4,5,6,7,8,9],"label":["Jake","Amy","Rosa","Terry","Charles","Gina","Raymond","Hitchcock","Scully"],"group":["Male","Female","Female","Male","Male","Female","Male","Male","Male"],"occupation":["Detective","Sergeant","Detective","Lieutenant","Detective","Civilian Administrator","Captain","Detective","Detective"]},"edges":{"from":[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,5,5,5,5,6,6,6,7,7,8],"to":[2,5,7,3,4,6,8,9,5,7,3,4,6,8,9,7,4,5,6,8,9,5,6,7,8,9,6,7,8,9,7,8,9,8,9,9]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","font":{"size":20}},"manipulation":{"enabled":false},"groups":{"Female":{"shape":"circle","icon":{"code":"f182","size":20,"color":"violet"},"shadow":{"enabled":true}},"useDefaultGroups":true,"Male":{"shape":"circle","icon":{"code":"f183","size":20,"color":"skyblue"},"shadow":{"enabled":true}}},"interaction":{"selectConnectedEdges":true,"zoomView":true}},"groups":["Male","Female"],"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","iconsRedraw":true,"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-955bc1c7fbb084ec20a3" style="width:480px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-955bc1c7fbb084ec20a3">{"x":{"nodes":{"id":[1,2,3,4,5,6,7,8,9],"X":[1,2,3,4,5,6,7,8,9],"label":["Jake","Amy","Rosa","Terry","Charles","Gina","Raymond","Hitchcock","Scully"],"group":["Male","Female","Female","Male","Male","Female","Male","Male","Male"],"occupation":["Detective","Sergeant","Detective","Lieutenant","Detective","Civilian Administrator","Captain","Detective","Detective"]},"edges":{"from":[1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,5,5,5,5,6,6,6,7,7,8],"to":[2,5,7,3,4,6,8,9,5,7,3,4,6,8,9,7,4,5,6,8,9,5,6,7,8,9,6,7,8,9,7,8,9,8,9,9]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","font":{"size":20}},"manipulation":{"enabled":false},"groups":{"Female":{"shape":"circle","icon":{"code":"f182","size":20,"color":"violet"},"shadow":{"enabled":true}},"useDefaultGroups":true,"Male":{"shape":"circle","icon":{"code":"f183","size":20,"color":"skyblue"},"shadow":{"enabled":true}}},"interaction":{"selectConnectedEdges":true,"zoomView":true}},"groups":["Male","Female"],"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","iconsRedraw":true,"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 ```
 It shows how each character is connected to the other,i.e shows the relationships between them.
 
@@ -207,6 +207,10 @@ I chose the DIAMONDS dataset for this graph.
 
 I plotted a graph of the count vs the cut to find how many diamonds are of very good cut.
 
+
+
+## Graph 3
+My map of Mysore
 
 
 

@@ -35,9 +35,9 @@ library(tmap)
 
 > HI!! I'm Aditi and you're going to see a few of my favorite graphs and maps that I made using R Studio.
 
-## Graph 1
+## Graph 1: 
 
-How are characters related to each other?
+How are these **Brooklyn99** characters related to each other?
 
 ```{r}
 B99_nodes <- read.csv("./data/B99 nodes.csv" )
@@ -111,6 +111,10 @@ geom_bar()
 
 I plotted a graph of the count vs the cut to find how many diamonds are of very good cut.
 
+
+
+## Graph 3
+My map of Mysore
 
 ```{r, include=FALSE, eval=FALSE}
 #bbox_p <- prettymapr::searchbbox(querystring = "Mysore,India")
