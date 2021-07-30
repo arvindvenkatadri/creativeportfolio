@@ -58,7 +58,7 @@ We learnt how to create a map with code using 'tmaps'.I created an interactive m
 ### Getting the coordinates
 
 ```{r}
-bbox_khar <- searchbbox((queerystring = "khar,mumbai, India"))
+bbox_khar <- searchbbox(querystring = "khar,mumbai, India")
 
 bbox_khar
 ```
