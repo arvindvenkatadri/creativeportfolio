@@ -38,7 +38,7 @@ library(igraphdata)
 
 ## Introduction
 
-Hi! I'm Prisha, and today I'll be showing you a glimpse into what I've learnt in this workshop as we fell down the rabbit hole of R-studio.
+Hi! I'm Prisha, and today I'll be showing you a glimpse into what I've learnt in this workshop as we fell down the rabbit hole of RStudio.
 
 ## Graph 1
 

@@ -25,6 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(palmerpenguins)
 library(osmplotr)
+library(osmdata)
 library(prettymapr)
 library(sf)
 ```
@@ -35,14 +36,16 @@ library(sf)
 
 ## Graph 1
 
-I used geom_sf to make the graph, it was more fun than i expected. The way graph came up looked satisfying. 
+I used `geom_sf` to make the graph of Jaipur City, it was more fun than i expected. The way graph came up looked satisfying. 
 
-
-bbox_jaipur <- searchbbox(querystring = "Jaipur, India")
+```{r cache=TRUE}
+bbox_jaipur <- getbb("Jaipur, India")
 dat_jaipur_H <- extract_osm_objects(bbox_jaipur, "highway")
 dat_jaipur_B <- extract_osm_objects(bbox_jaipur, "building")
 dat_jaipur_R <- extract_osm_objects(bbox = bbox_jaipur, key = "amenity", value = "restaurant", return_type = "point")
+```
 
+```{r, message=FALSE}
 ## Using geom_sf()
 ggplot() + 
   geom_sf(data = dat_jaipur_H, colour = "dodger blue") + 
@@ -50,9 +53,10 @@ ggplot() +
   geom_sf(data = dat_jaipur_R, colour = "Yellow", fill = "red") + 
   theme(panel.background = element_rect(fill = "palegreen")) + 
   labs(title = "Pink City is not so pink anymore", subtitle = "food is everywhere")
+```
 
 
-
+## Graph 2
 
 This graph is about the sleeping patterns of mammals. I used ggplot to make the graph.
 The fun part about the graph is, it's also sleeping the way I want to. 
@@ -77,7 +81,7 @@ ggplot(msleep) + geom_line(aes(sleep_cycle, sleep_total, group= vore, color= vor
 
 ```
 
-## Graph 2
+## Graph 3
 
 This dataset is about the diamonds. Related to color and carat. 
 
@@ -96,14 +100,6 @@ ggplot(diamonds,
 
 ```
 
-## Graph 3
-
-This graph is about the names. I used arvind's name cause idk some error is showing up when i am trying for mine. 
-Oh btw i used ggplot to make this plot.
-
-```{r}
-plot 
-```
 
 ## My Course Reflection
 
@@ -111,4 +107,4 @@ This course was all about patience and sitting still on your chair and work with
 It was a fun workshop. Arvind made it much easy than i thought. 
 Definitely helped me with the patience thing.
 
-Thankyou.
+Thank you.

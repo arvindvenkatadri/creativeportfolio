@@ -16,40 +16,90 @@ output:
     fig_width: 5
     fig_height: 5
     keep_md: yes
-description: This is an analysis of the family relationships in Game of Thrones, using
-  R. **EDIT THIS**.
+description: This is my journey exploring R!
 ---
 
 
 
 
-## Instructions
-
-Delete all of this and paste in your own content right here!!
-
-### Portfolio File Format
-
-To create a new Portfolio entry, make sure that you selected `R Markdown (.Rmd)` as the _format_ option of the post when using the `New Post` `blogdown` addin.
-
-### Setup chunk
-
-Make sure you edit the setup chunk above and bring in **all** packages you need using *r library(package_name)*. 
 
 
-### Inserting a Custom image in your Post
-
-The easiest option is to use the `blogdown` _Insert Image_ RStudio addin to add an external image.
-
-Another way: use a code chunk, if you already have the image downloaded and ready. Place the image in the **same folder** as this Post, and link to it with the chunk below:
-
-<img src="./default.jpg" width="100%" />
-
-### Narrative Text and Futher Code chunks
-
-Start typing/pasting text here.
-
-Diamonds are forever. We can see that from this graph below:
-
-<img src="unnamed-chunk-2-1.png" width="480" />
+<style type="text/css">
+h3{color:rgb(80, 7, 163);font-size:50px;font-family:Montserrat Light;}
+</style>
 
 
+<style type="text/css">
+h5{color:rgb(50, 141, 168);font-size:30px;font-family:Montserrat Light;}
+</style>
+
+
+<style type="text/css">
+h6{color:rgb(0, 0, 0);font-size:15px;font-family:Montserrat Light;}
+</style>
+
+<style type="text/css">
+h2{color:rgb(122, 34, 119);font-size:70px;font-family:Montserrat Light;}
+</style>
+
+
+
+## **PORTFOLIO**
+
+##### _Tanvi Patravali_
+
+
+<br>
+
+<style type="text/css">
+body{color:rgb(0, 0, 0);font-size:17px;font-family:Poppins;}
+</style>
+
+
+
+### ANALYSING MSLEEP DATA
+
+
+###### _A bar graph showing the awake time of species, classified by order and eating habits_
+
+
+<img src="index_files/figure-html/unnamed-chunk-7-1.png" width="480" />
+
+
+<br>
+
+
+###### _A density chart showing the total sleep time of different species, classifies by conservation status and thier eating habits_
+
+
+<img src="index_files/figure-html/unnamed-chunk-8-1.png" width="480" />
+
+
+
+
+
+
+
+
+### A NETWORK ANALYSIS FROM THE SERIES _THE GOOD DOCTOR_
+
+
+###### _A network analysis between different characters from episode 3 and 4 of season 1_
+
+
+
+
+
+
+
+
+
+<img src="index_files/figure-html/unnamed-chunk-9-1.png" width="480" />
+
+
+
+
+
+### REFLECTION
+
+During this course, I learnt the importance of analysis of data. I realised that there are so many ways data can be represented, and doing it the right way makes the entire process of comprehension a whole lot easier. I also really liked playing around with maps and having fun with the datasets. Working with code to make these was a bit intimidating at first, but I did like that we were given time to play around and experiment with each module, to understand it better. After this workshop, I also feel like I am a lot more comfortable coding, and I think I understand programming better. 

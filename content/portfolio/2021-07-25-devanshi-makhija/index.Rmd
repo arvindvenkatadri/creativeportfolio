@@ -58,7 +58,7 @@ We learnt how to create a map with code using 'tmaps'.I created an interactive m
 ### Getting the coordinates
 
 ```{r}
-bbox_khar <- searchbbox(querystring = "khar,mumbai, India")
+bbox_khar <- getbb("Khar, Mumbai, India")
 
 bbox_khar
 ```
@@ -80,10 +80,10 @@ dat_khar_E <- extract_osm_objects(bbox_khar, key = "amenity", value = "cafe", re
 dat_khar_G <- extract_osm_objects (bbox = bbox_khar, key = "landuse", value = "cemetery")
 ```
 
-```{r plot-1}
+```{r plot-1, message=FALSE}
 
   
-  tmap_mode("view")
+  tmap_mode("plot")
 
   tm_shape(dat_khar_B)+
   tm_bubbles(col = "lightsteelblue")+

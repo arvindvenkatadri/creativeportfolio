@@ -16,51 +16,142 @@ output:
     fig_width: 5
     fig_height: 5
     keep_md: yes
-description: This is an analysis of the family relationships in Game of Thrones, using
-  R. **EDIT THIS**.
+description: This is my journey exploring R!
 ---
 
 
-```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
-knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
-## Load frequently used packages for blog posts
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(error = TRUE, comment = NA, warning = FALSE, errors = FALSE, message = FALSE, tidy = FALSE, cache = FALSE)
+library(extrafont)
+
+loadfonts()
+
 library(tidyverse)
-```
-
-## Instructions
-
-Delete all of this and paste in your own content right here!!
-
-### Portfolio File Format
-
-To create a new Portfolio entry, make sure that you selected `R Markdown (.Rmd)` as the _format_ option of the post when using the `New Post` `blogdown` addin.
-
-### Setup chunk
-
-Make sure you edit the setup chunk above and bring in **all** packages you need using *r library(package_name)*. 
 
 
-### Inserting a Custom image in your Post
+library(igraph)
+library(netrankr)
 
-The easiest option is to use the `blogdown` _Insert Image_ RStudio addin to add an external image.
 
-Another way: use a code chunk, if you already have the image downloaded and ready. Place the image in the **same folder** as this Post, and link to it with the chunk below:
+library(tidygraph)
 
-```{r echo=FALSE, out.width='100%', fig.align = "centre"}
-knitr::include_graphics('./default.jpg')
-```
 
-### Narrative Text and Futher Code chunks
+library(ggraph)
+library(graphlayouts)
 
-Start typing/pasting text here.
 
-Diamonds are forever. We can see that from this graph below:
+library(igraphdata)
 
-```{r}
-diamonds %>% 
-   ggplot(aes(x = carat, y = price, color = cut)) + 
-   geom_point(alpha = 0.1)
-   
 ```
 
 
+
+```{css, echo=FALSE}
+h3{color:rgb(80, 7, 163);font-size:50px;font-family:Montserrat Light;}
+```
+
+
+```{css, echo=FALSE}
+h5{color:rgb(50, 141, 168);font-size:30px;font-family:Montserrat Light;}
+```
+
+
+```{css, echo=FALSE}
+h6{color:rgb(0, 0, 0);font-size:15px;font-family:Montserrat Light;}
+```
+
+```{css, echo=FALSE}
+h2{color:rgb(122, 34, 119);font-size:70px;font-family:Montserrat Light;}
+```
+
+```{r, include = FALSE}
+library(tidyverse)
+library(RColorBrewer)
+```
+
+## **PORTFOLIO**
+
+##### _Tanvi Patravali_
+
+
+<br>
+
+```{css, echo=FALSE}
+body{color:rgb(0, 0, 0);font-size:17px;font-family:Poppins;}
+```
+
+
+
+### ANALYSING MSLEEP DATA
+
+
+###### _A bar graph showing the awake time of species, classified by order and eating habits_
+
+
+```{r, echo = FALSE}
+ggplot(msleep) + geom_histogram(aes(x = awake, fill = order)) + facet_wrap(~vore)
+```
+
+
+<br>
+
+
+###### _A density chart showing the total sleep time of different species, classifies by conservation status and thier eating habits_
+
+
+```{r, echo=FALSE}
+ggplot(msleep) + geom_density(aes(x = sleep_total, color = conservation, fill = conservation), alpha = 0.2) + facet_wrap(~vore)
+```
+
+
+
+
+
+
+
+
+### A NETWORK ANALYSIS FROM THE SERIES _THE GOOD DOCTOR_
+
+
+###### _A network analysis between different characters from episode 3 and 4 of season 1_
+
+
+
+```{r Read data, include=FALSE}
+good_nodes <- read_delim(delim = ";", "./Data/good-doctor-nodes.csv" )
+good_edges <- read_delim(delim = ";", "./Data/good-doctor-edges.csv")
+good_nodes
+good_edges
+```
+
+
+```{r Create-graph-object,include=FALSE}
+gd <- tbl_graph(edges = good_edges, 
+                nodes = good_nodes, 
+                directed = FALSE)
+gd
+```
+
+
+```{r, echo=FALSE}
+
+ggraph(graph = gd, layout = "fr") +
+  geom_edge_link0(aes(width = weight)) + 
+  
+  geom_node_point(aes(colour = role, size = 3)) +
+
+  geom_node_label(aes(label = name), 
+                  repel = TRUE, max.overlaps = 20,
+                  alpha = 0.6,
+                  size = 3) +
+  
+  labs(title = "A colourful Good Doctor graph")
+```
+
+
+
+
+
+### REFLECTION
+
+During this course, I learnt the importance of analysis of data. I realised that there are so many ways data can be represented, and doing it the right way makes the entire process of comprehension a whole lot easier. I also really liked playing around with maps and having fun with the datasets. Working with code to make these was a bit intimidating at first, but I did like that we were given time to play around and experiment with each module, to understand it better. After this workshop, I also feel like I am a lot more comfortable coding, and I think I understand programming better. 

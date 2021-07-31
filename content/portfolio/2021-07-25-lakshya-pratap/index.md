@@ -22,6 +22,15 @@ description: This is the portfolio of Lakshya Pratap.
 
 
 
+## Graph 1: Bar Graph from Lab 03, Midwest Database
+
+This graph shows that which state in the Midwest consists of what kind of categories.
+<img src="unnamed-chunk-1-1.png" width="480" />
+
+
+
+## Graph 2: Map Of My City Jodhpur & Its famous Places/ Restaurants
+#### Map from Lab 06
 
 
 ```
@@ -30,39 +39,6 @@ description: This is the portfolio of Lakshya Pratap.
 ## y 26.25 26.35
 ```
 
-```
-##        min      max
-## x 72.94858 73.08887
-## y 26.20598 26.35367
-```
-
-```
-##        min      max
-## x 72.94858 73.08887
-## y 26.20598 26.35367
-```
-
-
-
-
-
-```
-##     min   max
-## x 73.02 73.15
-## y 26.25 26.35
-```
-
-```
-##        min      max
-## x 72.94858 73.08887
-## y 26.20598 26.35367
-```
-
-```
-##        min      max
-## x 72.94858 73.08887
-## y 26.20598 26.35367
-```
 
 
 
@@ -70,18 +46,10 @@ description: This is the portfolio of Lakshya Pratap.
 
 
 
+<img src="unnamed-chunk-5-1.png" width="480" />
 
-
-
-
-# Graph 1: Bar Graph from Lab 03, Midwest Database
-## This graph shows that which state in the Midwest consists of what kind of categories.
-<img src="unnamed-chunk-6-1.png" width="480" />
-
-# Map Of My City Jodhpur & Its famous Places/ Restaurants
-## Map from Lab 06
-<img src="unnamed-chunk-7-1.png" width="480" /><img src="unnamed-chunk-7-2.png" width="480" />
-
+## Graph 3: The Graph from my favourite TV Show: Narcos
+### Graph from the learnings of Lab 07
 
 
 ```
@@ -136,6 +104,7 @@ description: This is the portfolio of Lakshya Pratap.
 ## 20 Diana Turbay                 Cesar Gaveria       Friends
 ```
 
+
 ```
 ## # A tbl_graph: 20 nodes and 20 edges
 ## #
@@ -161,12 +130,13 @@ description: This is the portfolio of Lakshya Pratap.
 ## # ... with 17 more rows
 ```
 
-# 1. The Graph from my favourite TV Show: Narcos
-## Graph from the learnings of Lab 07
-<img src="unnamed-chunk-10-1.png" width="480" />
 
-# Graph 2 from the same TV show. 
-## showing the relationship between the characters
-<img src="unnamed-chunk-11-1.png" width="480" />
+<img src="unnamed-chunk-8-1.png" width="480" />
+
+### Graph 2 from the same TV show. 
+
+Showing the relationship between the characters
+
+<img src="unnamed-chunk-9-1.png" width="480" />
 
 

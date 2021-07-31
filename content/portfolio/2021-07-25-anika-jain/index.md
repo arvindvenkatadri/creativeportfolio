@@ -28,14 +28,72 @@ description: Anika's Journey using graphs, Mapping and Networks.
 
 ## Graph 1
 
-I used geom_sf to make the graph, it was more fun than i expected. The way graph came up looked satisfying. 
+I used `geom_sf` to make the graph of Jaipur City, it was more fun than i expected. The way graph came up looked satisfying. 
 
 
-bbox_jaipur <- searchbbox(querystring = "Jaipur, India")
+```r
+bbox_jaipur <- getbb("Jaipur, India")
 dat_jaipur_H <- extract_osm_objects(bbox_jaipur, "highway")
-dat_jaipur_B <- extract_osm_objects(bbox_jaipur, "building")
-dat_jaipur_R <- extract_osm_objects(bbox = bbox_jaipur, key = "amenity", value = "restaurant", return_type = "point")
+```
 
+```
+## Issuing query to Overpass API ...
+```
+
+```
+## Rate limit: 2
+```
+
+```
+## Query complete!
+```
+
+```
+## converting OSM data to sf format
+```
+
+```r
+dat_jaipur_B <- extract_osm_objects(bbox_jaipur, "building")
+```
+
+```
+## Issuing query to Overpass API ...
+```
+
+```
+## Rate limit: 2
+```
+
+```
+## Query complete!
+```
+
+```
+## converting OSM data to sf format
+```
+
+```r
+dat_jaipur_R <- extract_osm_objects(bbox = bbox_jaipur, key = "amenity", value = "restaurant", return_type = "point")
+```
+
+```
+## Issuing query to Overpass API ...
+```
+
+```
+## Rate limit: 2
+```
+
+```
+## Query complete!
+```
+
+```
+## converting OSM data to sf format
+```
+
+
+```r
 ## Using geom_sf()
 ggplot() + 
   geom_sf(data = dat_jaipur_H, colour = "dodger blue") + 
@@ -43,9 +101,12 @@ ggplot() +
   geom_sf(data = dat_jaipur_R, colour = "Yellow", fill = "red") + 
   theme(panel.background = element_rect(fill = "palegreen")) + 
   labs(title = "Pink City is not so pink anymore", subtitle = "food is everywhere")
+```
+
+<img src="index_files/figure-html/unnamed-chunk-2-1.png" width="480" />
 
 
-
+## Graph 2
 
 This graph is about the sleeping patterns of mammals. I used ggplot to make the graph.
 The fun part about the graph is, it's also sleeping the way I want to. 
@@ -59,7 +120,7 @@ ggplot(msleep) +
                  alpha = 0.5)
 ```
 
-<img src="index_files/figure-html/unnamed-chunk-1-1.png" width="480" />
+<img src="index_files/figure-html/unnamed-chunk-3-1.png" width="480" />
 
 The graph shows the the different sleep patterns.
 
@@ -77,9 +138,9 @@ ggplot(msleep) + geom_line(aes(sleep_cycle, sleep_total, group= vore, color= vor
 ## Warning: Removed 51 row(s) containing missing values (geom_path).
 ```
 
-<img src="index_files/figure-html/unnamed-chunk-2-1.png" width="480" />
+<img src="index_files/figure-html/unnamed-chunk-4-1.png" width="480" />
 
-## Graph 2
+## Graph 3
 
 This dataset is about the diamonds. Related to color and carat. 
 
@@ -96,7 +157,7 @@ ggplot(diamonds,
 ## `geom_smooth()` using formula 'y ~ x'
 ```
 
-<img src="index_files/figure-html/unnamed-chunk-3-1.png" width="480" />
+<img src="index_files/figure-html/unnamed-chunk-5-1.png" width="480" />
 
 ```r
 ggplot(diamonds, 
@@ -110,24 +171,8 @@ ggplot(diamonds,
 ## `geom_smooth()` using formula 'y ~ x'
 ```
 
-<img src="index_files/figure-html/unnamed-chunk-3-2.png" width="480" />
+<img src="index_files/figure-html/unnamed-chunk-5-2.png" width="480" />
 
-## Graph 3
-
-This graph is about the names. I used arvind's name cause idk some error is showing up when i am trying for mine. 
-Oh btw i used ggplot to make this plot.
-
-
-```r
-plot 
-```
-
-```
-## function (x, y, ...) 
-## UseMethod("plot")
-## <bytecode: 0x7febf0031df0>
-## <environment: namespace:base>
-```
 
 ## My Course Reflection
 
@@ -135,4 +180,4 @@ This course was all about patience and sitting still on your chair and work with
 It was a fun workshop. Arvind made it much easy than i thought. 
 Definitely helped me with the patience thing.
 
-Thankyou.
+Thank you.

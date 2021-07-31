@@ -52,38 +52,16 @@ h4.date {
 
 <br>
 
-## **Height and Weight of the Heroes along with their Hair colour**
+## Height and Weight of the Heroes along with their Hair colour
 
 
 
 
-
-
-```
-## # A tibble: 817 x 25
-##     ...1 name          Gender Eyecolor Race  Haircolor Height Publisher Skincolor
-##    <dbl> <chr>         <chr>  <chr>    <chr> <chr>      <dbl> <chr>     <chr>    
-##  1     0 A-Bomb        Male   yellow   Human No Hair      203 Marvel C~ -        
-##  2     1 Abe Sapien    Male   blue     Icth~ No Hair      191 Dark Hor~ blue     
-##  3     2 Abin Sur      Male   blue     Unga~ No Hair      185 DC Comics red      
-##  4     3 Abomination   Male   green    Huma~ No Hair      203 Marvel C~ -        
-##  5     4 Abraxas       Male   blue     Cosm~ Black        -99 Marvel C~ -        
-##  6     5 Absorbing Man Male   blue     Human No Hair      193 Marvel C~ -        
-##  7     6 Adam Monroe   Male   blue     -     Blond        -99 NBC - He~ -        
-##  8     7 Adam Strange  Male   blue     Human Blond        185 DC Comics -        
-##  9     8 Agent 13      Female blue     -     Blond        173 Marvel C~ -        
-## 10     9 Agent Bob     Male   brown    Human Brown        178 Marvel C~ -        
-## # ... with 807 more rows, and 16 more variables: Alignment <chr>, Weight <dbl>,
-## #   intelligence <chr>, strength <chr>, speed <chr>, durability <chr>,
-## #   power <chr>, combat <chr>, mindcontrol <chr>, mattermanipulation <chr>,
-## #   telepathy <chr>, telekinesis <chr>, shapeshifting <chr>, timetravel <chr>,
-## #   elementcontrol <chr>, sizechanging <chr>
-```
 
 ```
 ## Rows: 817
 ## Columns: 25
-## $ ...1               <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1~
+## $ X1                 <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1~
 ## $ name               <chr> "A-Bomb", "Abe Sapien", "Abin Sur", "Abomination", ~
 ## $ Gender             <chr> "Male", "Male", "Male", "Male", "Male", "Male", "Ma~
 ## $ Eyecolor           <chr> "yellow", "blue", "blue", "green", "blue", "blue", ~
@@ -110,7 +88,7 @@ h4.date {
 ## $ sizechanging       <chr> "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "~
 ```
 
-<img src="unnamed-chunk-4-1.png" width="480" />
+<img src="unnamed-chunk-3-1.png" width="480" />
 
 <font size="3"> The above graph is a point graph, it specifies height and weight of the heroes according to their hair colour. I added the function alpha, as the points are too cluttered. </font>
 
@@ -120,11 +98,16 @@ h4.date {
 
 <br>
 
-## **Restaurants in Madhapur, Hyderabad**
+## Restaurants in Madhapur, Hyderabad
 
-### ***My Heart is in Hyd, Hyd is for Food***
+***My Heart is in Hyd, Hyd is for Food***
 
 
+```
+##        min      max
+## x 78.37163 78.41163
+## y 17.42086 17.46086
+```
 
 
 
@@ -330,7 +313,7 @@ h4.date {
 ## $ geometry           <POINT [°]> POINT (78.38597 17.44503), POINT (78.39351 17~
 ```
 
-<img src="unnamed-chunk-10-1.png" width="480" />
+<img src="unnamed-chunk-9-1.png" width="480" />
 
 <font size="3"> I wanted to show restaurants in Madhapur, which is a part of Hyderabad. As for the overall map, I waned to show buildings, parks, highways, trees, water bodes... I also represented them with suppurate colors which symbolizes them. The red triangular bullets are the named restraints in Madhapur along with their name.I also included a 8 star compass and a scale bar. </font>
 
@@ -340,7 +323,7 @@ h4.date {
 
 <br>
 
-## **Connections between the characters**
+## Connections between the characters
 
 ### ![***The Boys***](https://www.militarypress.com/wp-content/uploads/2020/07/the-boys.jpg)
 
@@ -408,7 +391,7 @@ h4.date {
 ## # ... with 70 more rows
 ```
 
-<img src="unnamed-chunk-13-1.png" width="480" />
+<img src="unnamed-chunk-12-1.png" width="480" />
 
 <font size="3"> The graph above shows which of the characters in the shows, "The Boy's" has the most connections with others, the bigger the circles in the graph, the more intense the relation between characters. Also, the thickness of the lines specifies the weight of the dialog in the particular episodes (S1 E1,2,3,4). </font>
 
