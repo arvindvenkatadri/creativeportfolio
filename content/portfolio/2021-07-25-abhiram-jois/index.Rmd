@@ -26,14 +26,13 @@ knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FA
 library(tidyverse)
 library(sf)
 library(tmap)
-library(prettymapr)
 library(osmplotr)
 library(osmdata)
 library(igraph)
 library(tidygraph)
 library(ggraph)
 library(visNetwork)
-library(kableExtra)
+
 ```
 
 ```{r, warning=FALSE, message=FALSE}
@@ -54,17 +53,21 @@ bojack_edges<-read_csv("./data/bojack-edges.csv")
 The following is a datset of all the players in the game FIFA-19 and their player attributes. The initial dataset was very large, this is a concised version of the same.
 
 ```{r}
-concisedData %>%  
-  kbl(., caption = "FIFA dataset") %>%
-  kable_styling(bootstrap_options = "striped",
-                full_width = T) %>% scroll_box(height = "500px")
+concisedData 
+# %>%  
+#   kbl(., caption = "FIFA dataset") %>%
+#   kable_styling(bootstrap_options = "striped",
+#                 full_width = T) %>% scroll_box(height = "500px")
 ```
 
 
 ### What is the value of most internaltionally reputed players and which nationality and club do they belong to?
 
 ```{r, warning=FALSE, message=FALSE}
-concisedData %>% filter(`International Reputation`=="5") %>% ggplot(aes(x=`International Reputation`,fill=Value))+geom_bar()+facet_grid(Nationality~Club)
+concisedData %>% 
+  filter(`International Reputation`=="5") %>% ggplot(aes(x=`International Reputation`,fill=Value)) +
+  geom_bar() +
+  facet_grid(Nationality~Club)
 ```
 
 ## Graph 2: Making a map with some nice places to eat in Rajajinagar
@@ -174,8 +177,5 @@ b3v %>%
 
 ## Reflection
 
-<<<<<<< HEAD
-Coding is something I have always enjoyed doing. Similarly this course was enjoyable as well. The course constantly kept me challenged and on my feet at all times. It was nice to spend a lot of waking and sometimes even sleeping hours trying to figure out why something is not working. It was nice to relive that feeling of finally figuring out a faulty code (it's usually the bracket)). Over all this course was good wrap to the year and was a fun introduction to R. R studio is a very powerful tool which I am sure I will explore a lot more in the years to come. I want to thank Arvind for introducing me to R.
-=======
-Coding is something I have always enjoyed doing. Similarly this course was enjoyable as well. The course constantly kept me challenged and on my feet at all times. It was nice to spend a lot of waking and sometimes even sleeping hours trying to figure out why something is not working. It was nice to relive that feeling of finally figuring out a faulty code (it's usually the bracket)). Over all this course was good wrap to the year and was a fun introduction to R. R studio is a very powerful tool which I am sure I will explore a lot more in the years to come. I want to thank Arvind for introducing me to R. He was really patient with all my doubts and kept our enthusiasm high all through. He's the coolest boomer I know which is kinda sus
->>>>>>> 3e6f3b41fcda5aba49ead64c8787c7cd935f3917
+Coding is something I have always enjoyed doing. Similarly this course was enjoyable as well. The course constantly kept me challenged and on my feet at all times. It was nice to spend a lot of waking and sometimes even sleeping hours trying to figure out why something is not working. It was nice to relive that feeling of finally figuring out a faulty code (it's usually the bracket)). Over all this course was good wrap to the year and was a fun introduction to R. R studio is a very powerful tool which I am sure I will explore a lot more in the years to come. I want to thank Arvind for introducing me to R. He was really patient with all my doubts and kept our enthusiasm high all through. He's the coolest boomer I know which is kinda sus..
+
