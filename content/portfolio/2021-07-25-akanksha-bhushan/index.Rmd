@@ -16,50 +16,109 @@ output:
     fig_width: 5
     fig_height: 5
     keep_md: yes
-description: This is an analysis of the family relationships in Game of Thrones, using R. **EDIT THIS**.
+description: These are some of the best works from this course.
 ---
-
 
 ```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
 ## Load frequently used packages for blog posts
 library(tidyverse)
+library(dplyr) 
+
+library(palmerpenguins)
+library(RColorBrewer)
+library(igraph)
+library(netrankr)
+library(tidygraph)
+library(ggraph)
+library(graphlayouts)
+library(igraphdata)
 ```
 
-## Instructions
+## Graph 1
 
-Delete all of this and paste in your own content right here!!
+ For this map i took the star wars data set which had the variables name, height, mass, hair color, skin color, eye color, birth year, sex , gender, homeworld, species, films, vehicles and starships.
 
-### Portfolio File Format
-
-To create a new Portfolio entry, make sure that you selected `R Markdown (.Rmd)` as the _format_ option of the post when using the `New Post` `blogdown` addin.
-
-### Setup chunk
-
-Make sure you edit the setup chunk above and bring in **all** packages you need using *r library(package_name)*. 
-
-
-### Inserting a Custom image in your Post
-
-The easiest option is to use the `blogdown` _Insert Image_ RStudio addin to add an external image.
-
-Another way: use a code chunk, if you already have the image downloaded and ready. Place the image in the **same folder** as this Post, and link to it with the chunk below:
-
-```{r echo=FALSE, out.width='100%', fig.align = "centre"}
-knitr::include_graphics('./default.jpg')
+ My intent in this graph was to find out which all species have lived on the planet of Naboo. 
+ 
+```{r}
+starwars
+glimpse(starwars)
 ```
 
-### Narrative Text and Futher Code chunks
-
-Start typing/pasting text here.
-
-Diamonds are forever. We can see that from this graph below:
 
 ```{r}
-diamonds %>% 
-   ggplot(aes(x = carat, y = price, color = cut)) + 
-   geom_point(alpha = 0.1)
-   
+starwars %>% filter(homeworld == "Naboo") %>%
+  ggplot(aes(x = species,
+      y = name,
+      color = homeworld))  +  
+geom_point(size = 4)  +
+  facet_wrap(~species) 
+```
+
+## Graph 2
+
+In the first week we were also told to make a graph using a penguins dataset. The graph i'm showing below shows the flipper length in milli-meters of the male and female population.
+
+The variables for this table are: Species, Island, Bill length in milli meters, Bill depth in millimeters, Flipper depth in millimeters, Body mass in grams, Sex and Year.
+ 
+```{r}
+names(penguins) # Column, i.e. Variable names
+head(penguins) # first six rows
+tail(penguins) # Last six rows
+dim(penguins) # Size of dataset
+
+# Check for missing data
+any(is.na(penguins) == TRUE)
+```
+
+```{r}
+ggplot(penguins) + 
+  geom_histogram(aes(x = flipper_length_mm,
+                 fill = sex))
+```
+
+## Graph 3.
+
+In this assignment we were told to make a csv file with our own dataset on a particular episode of a particular tv show, movie, book, etc. I chose the show Blood Of Zeus which is on Netflix as that was the last show i watched during the holidays. 
+
+The graph bellow shows us the number of characters, the race of the characters and the weight of dialogues between the characters. The variables for this graph were Name, Sex, Race, Eye colour, Hair colour, Status and Dialogue weight.
+
+
+
+```{r}
+BOZ_nodes <- read_csv("BOZ_nodes.csv", col_names = TRUE)
+BOZ_edges <- read_csv("BOZ_edges.csv", col_names = TRUE)
+BOZ_edges
+BOZ_nodes
+```
+
+```{r}
+BOZ<- tbl_graph(nodes = BOZ_nodes, 
+                edges = BOZ_edges, 
+                directed = FALSE)
+BOZ
 ```
 
 
+```{r}
+ggraph(graph = BOZ, layout = "fr") +
+  geom_edge_link0(aes(width = Weight)) +
+  
+  geom_node_point(aes(colour = Race), size = 5, shape = 25) +
+
+  geom_node_label(aes(label = Name),
+                  repel = TRUE, max.overlaps = 15,
+                  alpha = 0.6,
+                  size = 3) +
+  
+  labs(title = "FINALLY")
+```
+
+## Reflections
+
+This workshop really opened me up to the world of coding, I had a cycle before this that was based on a few coding software as well but it never came close to being this stressful whenever I got an error or when freeing when I got the result I wanted. 
+
+Coming into the workshop I thought i would not like it as much because of the amount I complained in the previous cycle about coding but it actually turned out to be fun and having Arvind as a facilitator was a real plus point as he was patient enough to explain to my classmates and i where we were going wrong and also rectify our mistakes. 
+
+All in all i learnt a lot from this workshop and it was a great experience.
