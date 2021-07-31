@@ -1,24 +1,24 @@
 ---
 title: Nidhee Deshak
-author: Nidhee Deshak 
+author: Nidhee Deshak
 date: '2021-07-30'
-slug: []
-categories:
-  - R
-tags:
-  - R Markdown
-image: https://www.alice-in-wonderland.net/wp-content/uploads/191.jpg
-caption: ''
-preview: yes
 output:
+  html_document:
+    toc: no
+    df_print: paged
   blogdown::html_page:
     toc: no
     fig_width: 5
     fig_height: 5
     keep_md: yes
-description:  These are some of the best works from this course.
+categories: R
+tags: R Markdown
+image: https://www.alice-in-wonderland.net/wp-content/uploads/191.jpg
+caption: ''
+preview: yes
+slug: []
+description: These are some of the best works from this course.
 ---
-
 
 ```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
@@ -65,6 +65,7 @@ ga <- tbl_graph(nodes = frnds_nodes,
 ga
 ```
 
+
 ```{r}
 ga %>% 
   activate(nodes) %>% 
@@ -77,6 +78,7 @@ ga %>%
   # connectivity
   mutate(betweenness = centrality_edge_betweenness())
 ```
+
 
 As mentioned above, the graph below represents the ***centrality degree*** and ***betweenness*** of the nodes. 
 
@@ -108,6 +110,7 @@ ga %>%
               
 
 ```
+
 
 As we can see, Monica has the maximum betweenness. This tells us that she is the connecting entity between almost every other individual. She is probably the mutual friend everyone had before getting introduced. 
 
@@ -173,7 +176,7 @@ The table also tells us about the nature of those animals like genus, the type o
 msleep
 ```
 
-The graph below shows the density of the sleep rem among different types of vore like herbivores, carnivores, etc. 
+Th graph below shows the density of the sleep rem among different types of vore like herbivores, carnivores, etc. 
 
 The aes() function helps us in visual differentiation as it assigns different colors by default. 
 
@@ -184,7 +187,6 @@ ggplot(msleep) + geom_density( aes(x = sleep_rem,
                                alpha = 0.5)
 
 ```
-
 
 ## My Course Reflection
 
@@ -199,9 +201,3 @@ I have become fond of the satisfactory feeling I get after the file is knitted a
 I would like to work more on improving these concepts and think of ways in which I can use them to compliment my projects. 
 
 Thank you :)
-
-
-
-
-
-
