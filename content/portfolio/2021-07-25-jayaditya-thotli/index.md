@@ -61,7 +61,7 @@ h4.date {
 ```
 ## Rows: 817
 ## Columns: 25
-## $ ...1               <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1~
+## $ X1                 <dbl> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1~
 ## $ name               <chr> "A-Bomb", "Abe Sapien", "Abin Sur", "Abomination", ~
 ## $ Gender             <chr> "Male", "Male", "Male", "Male", "Male", "Male", "Ma~
 ## $ Eyecolor           <chr> "yellow", "blue", "blue", "green", "blue", "blue", ~

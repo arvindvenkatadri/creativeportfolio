@@ -35,9 +35,9 @@ library(tmap)
 
 > HI!! I'm Aditi and you're going to see a few of my favorite graphs and maps that I made using R Studio.
 
-## Graph 1: 
+## Graph 1
 
-How are these **Brooklyn99** characters related to each other?
+How are characters related to each other?
 
 ```{r}
 B99_nodes <- read.csv("./data/B99 nodes.csv" )
@@ -111,21 +111,22 @@ geom_bar()
 
 I plotted a graph of the count vs the cut to find how many diamonds are of very good cut.
 
+## MAP 3
+
+I used the dataset of prettymapr to plot a few specific data on the city of Mysore.
+```{r}
 
 
-## Graph 3
-My map of Mysore
 
-```{r, include=FALSE, eval=FALSE}
-#bbox_p <- prettymapr::searchbbox(querystring = "Mysore,India")
-bbox_p<- osmdata::getbb("Mysore")
+bbox_p <- prettymapr::searchbbox("Mysore")
+
 bbox_p
+
 ```
 
-```{r, include=FALSE, eval=FALSE}
+```{r}
 #DOWNLOADING DATA FROM OPEN STREET MAP AND ASSIGNING TO VARIABLES
 
-dat_B <- extract_osm_objects (key = 'building', bbox = bbox_p)
 dat_H <- extract_osm_objects (key = 'highway', bbox = bbox_p)
 dat_P <- extract_osm_objects (key = 'park', bbox = bbox_p)
 dat_G <- extract_osm_objects (key = 'landuse', value = 'grass', bbox = bbox_p)
@@ -135,21 +136,39 @@ glimpse(dat_H)
 glimpse(dat_P)
 glimpse(dat_G)
 glimpse(dat_T)
-glimpse(dat_B)
 
 ```
 
-```{r, include=FALSE, eval=FALSE}
+```{r}
+#DOWNLOADING RESTAURANT POINTS
+
+dat_R <- extract_osm_objects(bbox = bbox_p, 
+                             key = "amenity", 
+                             value = "restaurant", 
+                             return_type = "point") #<<
+
+dat_R %>%  nrow()
+
+#DOWNLOADING HEALTHCARE POINTS
+
+dat_Healthcare <- extract_osm_objects(bbox = bbox_p, 
+                             key = "healthcare", 
+                              
+                             return_type = "point") #<<
+
+dat_Healthcare %>%  nrow()
+```
+
+```{r}
 # USING GGPLOT TO MAP DATA
 
 mysore_map <- ggplot() +
-  geom_sf(data = dat_B, col= "gray")+
   geom_sf(data = dat_H, col = "blue") +     # LINES
-  #geom_sf(data = dat_G, col = "darkseagreen1") + 
-  #geom_sf(data = dat_P, col = "darkseagreen") +
+  geom_sf(data = dat_G, col = "darkseagreen1") + 
+  geom_sf(data = dat_P, col = "darkseagreen") +
   geom_sf(data = dat_T, col = "green")  +      # POINTS
   geom_sf(data = dat_R, colour = "red", size = 3, alpha = 0.5) +
-  #geom_sf(data = dat_Healthcare, colour = "violet", size = 7, alpha = 0.3) +
+  geom_sf(data = dat_Healthcare, colour = "violet", size = 7, alpha = 0.3) +
   labs(title = "MYSORE")
   mysore_map
    
@@ -168,4 +187,3 @@ Arvind is a Boomer from Srishti who knows to use "Bruh" now.
 I wish to have on campus classes with Arvind sometime:)
 
 
-Jai Hind.

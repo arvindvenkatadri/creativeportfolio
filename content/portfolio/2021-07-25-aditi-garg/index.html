@@ -34,8 +34,8 @@ description: Aditi Garg's website.
 </blockquote>
 </div>
 <div id="graph-1" class="section level2">
-<h2>Graph 1:</h2>
-<p>How are these <strong>Brooklyn99</strong> characters related to each other?</p>
+<h2>Graph 1</h2>
+<p>How are characters related to each other?</p>
 <pre><code>##         from        to weight     type
 ## 1       Jake       Amy      3 romantic
 ## 2       Jake   Charles      3  friends
@@ -189,9 +189,114 @@ I chose the DIAMONDS dataset for this graph.</p>
 <p><img src="unnamed-chunk-3-1.png" width="480" /></p>
 <p>I plotted a graph of the count vs the cut to find how many diamonds are of very good cut.</p>
 </div>
-<div id="graph-3" class="section level2">
-<h2>Graph 3</h2>
-<p>My map of Mysore</p>
+<div id="map-3" class="section level2">
+<h2>MAP 3</h2>
+<p>I used the dataset of prettymapr to plot a few specific data on the city of Mysore.</p>
+<pre><code>##        min      max
+## x 76.49536 76.81536
+## y 12.14518 12.46518</code></pre>
+<pre><code>## Rows: 22,104
+## Columns: 60
+## $ osm_id               &lt;chr&gt; &quot;8285857&quot;, &quot;8285861&quot;, &quot;8285890&quot;, &quot;8285892&quot;, &quot;8285~
+## $ name                 &lt;chr&gt; NA, NA, &quot;Sri Harsha Road&quot;, &quot;Ashoka Road&quot;, &quot;D. Dev~
+## $ AND.importance_level &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ AND_a_nosr_r         &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ GPS_Trail            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ access               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ addr.city            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ alt_name             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ alt_name.kn          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ alt_name_1           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ area                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ bicycle              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ bridge               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ covered              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ created_by           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ crossing             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ cutting              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ cycleway             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ foot                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ ford                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ highway              &lt;chr&gt; &quot;residential&quot;, &quot;secondary&quot;, &quot;tertiary&quot;, &quot;secondar~
+## $ horse                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ incline              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ indoor               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ int_name             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ int_ref              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ junction             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ lanes                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ layer                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ level                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ lit                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ maxspeed             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ maxspeed.type        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ motor_vehicle        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ mtb.scale            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ mtb.scale.uphill     &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ name.alt             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ name.en              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ name.kn              &lt;chr&gt; &quot;à²…à²•à³\215à²¬à²°à³\215 à²°à²¸à³\215à²¤à³†&quot;, NA~
+## $ name.old             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ noname               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ note                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ old_name             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ old_name.kn          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ old_ref              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ oneway               &lt;chr&gt; NA, NA, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, NA, NA, NA, NA, NA, ~
+## $ ref                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ ref.old              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ service              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ sidewalk             &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ smoothness           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ source               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;~
+## $ surface              &lt;chr&gt; NA, &quot;asphalt&quot;, NA, &quot;asphalt&quot;, &quot;asphalt&quot;, &quot;asphalt~
+## $ toll                 &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ tracktype            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ tunnel               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ vehicle              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ wheelchair           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ width                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ geometry             &lt;LINESTRING [°]&gt; LINESTRING (76.64894 12.318..., LINEST~</code></pre>
+<pre><code>## Rows: 156
+## Columns: 16
+## $ osm_id        &lt;chr&gt; &quot;28240152&quot;, &quot;28413680&quot;, &quot;28413759&quot;, &quot;28424626&quot;, &quot;2842463~
+## $ name          &lt;chr&gt; &quot;GRS Fantasy Park&quot;, &quot;Subbarayanakere Park&quot;, &quot;Curzon Park~
+## $ addr.city     &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;Mysuru&quot;, NA, NA~
+## $ addr.postcode &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;570008&quot;, NA, NA~
+## $ addr.street   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;16th Cross Road~
+## $ designation   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, &quot;Vijyangar II stage, near po~
+## $ landuse       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+## $ leisure       &lt;chr&gt; &quot;water_park&quot;, &quot;park&quot;, &quot;park&quot;, &quot;park&quot;, &quot;park&quot;, &quot;park&quot;, &quot;p~
+## $ name.en       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+## $ name.kn       &lt;chr&gt; NA, &quot;à²¸à³\201à²¬à³\215à²¬à²°à²¾à²¯à²¨à²•à³†à²°à³† à²‰à²~
+## $ opening_hours &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+## $ operator      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+## $ source        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, &quot;known place&quot;, NA, NA, &quot;loca~
+## $ tourism       &lt;chr&gt; &quot;theme_park&quot;, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+## $ wheelchair    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+## $ geometry      &lt;POLYGON [°]&gt; POLYGON ((76.63517 12.35518..., POLYGON ((76.646~</code></pre>
+<pre><code>## Rows: 57
+## Columns: 8
+## $ osm_id   &lt;chr&gt; &quot;28918825&quot;, &quot;28918827&quot;, &quot;28919161&quot;, &quot;28919162&quot;, &quot;28919228&quot;, &quot;~
+## $ name     &lt;chr&gt; &quot;Winning post&quot;, &quot;The pond&quot;, &quot;Respite&quot;, &quot;The lake&quot;, &quot;The bend&quot;~
+## $ barrier  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ golf     &lt;chr&gt; &quot;fairway&quot;, &quot;fairway&quot;, &quot;fairway&quot;, &quot;fairway&quot;, &quot;fairway&quot;, &quot;fairw~
+## $ landuse  &lt;chr&gt; &quot;grass&quot;, &quot;grass&quot;, &quot;grass&quot;, &quot;grass&quot;, &quot;grass&quot;, &quot;grass&quot;, &quot;grass&quot;~
+## $ ref      &lt;chr&gt; &quot;18&quot;, &quot;1&quot;, &quot;17&quot;, &quot;6&quot;, &quot;4&quot;, &quot;3&quot;, &quot;16&quot;, NA, NA, NA, &quot;6&quot;, &quot;10&quot;, ~
+## $ tee      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, &quot;white&quot;, NA, NA, NA, ~
+## $ geometry &lt;POLYGON [°]&gt; POLYGON ((76.66181 12.29608..., POLYGON ((76.66188 12~</code></pre>
+<pre><code>## Rows: 636
+## Columns: 7
+## $ osm_id         &lt;chr&gt; &quot;3380643217&quot;, &quot;3650204586&quot;, &quot;3650204587&quot;, &quot;3650204588&quot;,~
+## $ name           &lt;chr&gt; &quot;Dodda Alada Mara&quot;, NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+## $ name.botanical &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,~
+## $ name.kn        &lt;chr&gt; &quot;à²¦à³Šà²¡à³\215à²¡ à²†à²²à²¦à²®à²°&quot;, NA, NA, NA, NA, N~
+## $ natural        &lt;chr&gt; &quot;tree&quot;, &quot;tree&quot;, &quot;tree&quot;, &quot;tree&quot;, &quot;tree&quot;, &quot;tree&quot;, &quot;tree&quot;,~
+## $ species        &lt;chr&gt; &quot;Ficus benghalensis&quot;, NA, NA, NA, NA, NA, NA, NA, NA, N~
+## $ geometry       &lt;POINT [°]&gt; POINT (76.72106 12.28275), POINT (76.64845 12.267~</code></pre>
+<pre><code>## [1] 247</code></pre>
+<pre><code>## [1] 37</code></pre>
+<p><img src="unnamed-chunk-7-1.png" width="480" /></p>
 <p>I’ve plotted the highways, parks, landuse and natural spots on the map of mysore.</p>
 </div>
 <div id="my-course-reflection" class="section level2">
@@ -202,5 +307,4 @@ I think all this will help my practice as an aspiring artist and designer for ma
 Arvind is genuinely the best teacher i’ve ever had and if i had to learn R in my school in the 10th or 12th grade i would’ve simply been overwhelmed and avoided the topic but Arvind managed to build interest and enthusiasm in me to learn and troubleshoot the errors as well. Also I want to add that Arvind has great taste in music and i’d love to have access to his playlists.
 Arvind is a Boomer from Srishti who knows to use “Bruh” now.
 I wish to have on campus classes with Arvind sometime:)</p>
-<p>Jai Hind.</p>
 </div>

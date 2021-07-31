@@ -174,4 +174,8 @@ b3v %>%
 
 ## Reflection
 
+<<<<<<< HEAD
 Coding is something I have always enjoyed doing. Similarly this course was enjoyable as well. The course constantly kept me challenged and on my feet at all times. It was nice to spend a lot of waking and sometimes even sleeping hours trying to figure out why something is not working. It was nice to relive that feeling of finally figuring out a faulty code (it's usually the bracket)). Over all this course was good wrap to the year and was a fun introduction to R. R studio is a very powerful tool which I am sure I will explore a lot more in the years to come. I want to thank Arvind for introducing me to R.
+=======
+Coding is something I have always enjoyed doing. Similarly this course was enjoyable as well. The course constantly kept me challenged and on my feet at all times. It was nice to spend a lot of waking and sometimes even sleeping hours trying to figure out why something is not working. It was nice to relive that feeling of finally figuring out a faulty code (it's usually the bracket)). Over all this course was good wrap to the year and was a fun introduction to R. R studio is a very powerful tool which I am sure I will explore a lot more in the years to come. I want to thank Arvind for introducing me to R. He was really patient with all my doubts and kept our enthusiasm high all through. He's the coolest boomer I know which is kinda sus
+>>>>>>> 3e6f3b41fcda5aba49ead64c8787c7cd935f3917
