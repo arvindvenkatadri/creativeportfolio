@@ -16,11 +16,7 @@ output:
     fig_width: 5
     fig_height: 5
     keep_md: yes
-<<<<<<< .merge_file_a10424
 description: These are some of the best works from this course.
-=======
-description: This is my data viz work in R and RStudio!
->>>>>>> .merge_file_a10556
 ---
 
 
@@ -69,8 +65,136 @@ description: This is my data viz work in R and RStudio!
 ## $ starships  <list> <"X-wing", "Imperial shuttle">, <>, <>, "TIE Advanced x1",~
 ```
 
-<<<<<<< .merge_file_a10424
-=======
+
+<img src="unnamed-chunk-2-1.png" width="480" />
+
+## Graph 2
+
+In the first week we were also told to make a graph using a penguins dataset. The graph i'm showing below shows the flipper length in milli-meters of the male and female population.
+
+The variables for this table are: Species, Island, Bill length in milli meters, Bill depth in millimeters, Flipper depth in millimeters, Body mass in grams, Sex and Year.
+ 
+
+```
+## [1] "species"           "island"            "bill_length_mm"   
+## [4] "bill_depth_mm"     "flipper_length_mm" "body_mass_g"      
+## [7] "sex"               "year"
+```
+
+```
+## # A tibble: 6 x 8
+##   species island bill_length_mm bill_depth_mm flipper_length_~ body_mass_g sex  
+##   <fct>   <fct>           <dbl>         <dbl>            <int>       <int> <fct>
+## 1 Adelie  Torge~           39.1          18.7              181        3750 male 
+## 2 Adelie  Torge~           39.5          17.4              186        3800 fema~
+## 3 Adelie  Torge~           40.3          18                195        3250 fema~
+## 4 Adelie  Torge~           NA            NA                 NA          NA <NA> 
+## 5 Adelie  Torge~           36.7          19.3              193        3450 fema~
+## 6 Adelie  Torge~           39.3          20.6              190        3650 male 
+## # ... with 1 more variable: year <int>
+```
+
+```
+## # A tibble: 6 x 8
+##   species island bill_length_mm bill_depth_mm flipper_length_~ body_mass_g sex  
+##   <fct>   <fct>           <dbl>         <dbl>            <int>       <int> <fct>
+## 1 Chinst~ Dream            45.7          17                195        3650 fema~
+## 2 Chinst~ Dream            55.8          19.8              207        4000 male 
+## 3 Chinst~ Dream            43.5          18.1              202        3400 fema~
+## 4 Chinst~ Dream            49.6          18.2              193        3775 male 
+## 5 Chinst~ Dream            50.8          19                210        4100 male 
+## 6 Chinst~ Dream            50.2          18.7              198        3775 fema~
+## # ... with 1 more variable: year <int>
+```
+
+```
+## [1] 344   8
+```
+
+```
+## [1] TRUE
+```
+
+<img src="unnamed-chunk-4-1.png" width="480" />
+
+## Graph 3.
+
+In this assignment we were told to make a csv file with our own dataset on a particular episode of a particular tv show, movie, book, etc. I chose the show Blood Of Zeus which is on Netflix as that was the last show i watched during the holidays. 
+
+The graph bellow shows us the number of characters, the race of the characters and the weight of dialogues between the characters. The variables for this graph were Name, Sex, Race, Eye colour, Hair colour, Status and Dialogue weight.
+
+
+
+
+```
+## # A tibble: 22 x 4
+##     From    To Weight Type      
+##    <dbl> <dbl>  <dbl> <chr>     
+##  1     3    16      3 Associates
+##  2    13     6      1 Family    
+##  3     1    13      6 Brothers  
+##  4     1    17      4 Family    
+##  5     6     1      7 Family    
+##  6     2     6      5 Brothers  
+##  7     1     2     17 Family    
+##  8     7     2      2 Brothers  
+##  9    10     2      1 Friends   
+## 10     9     2      1 Friends   
+## # ... with 12 more rows
+```
+
+```
+## # A tibble: 17 x 7
+##    Name       `Node id` Sex           Race     `Eye colour` `Hair colour` Status
+##    <chr>          <dbl> <chr>         <chr>    <chr>        <chr>         <chr> 
+##  1 Zeus               1 Male          God      Blue         Dark Grey     Dead  
+##  2 Heron              2 Male          Demigod  Blue         Brown         Alive 
+##  3 Hera               3 Female        God      Blue         Aubergine     Alive 
+##  4 Electra            4 Female        Human    Brown        Brown         Alive 
+##  5 Seraphim           5 Male          Human/ ~ Brown/Red    White         Dead  
+##  6 Hermes             6 Male          God      Blue         Light Brown   Alive 
+##  7 Apollo             7 Male          God      Yellow       Blonde        Alive 
+##  8 Hephaestus         8 Male          God      Brown        Brown         Alive 
+##  9 Kofi               9 Male          Human    Dark Brown   Brown         Alive 
+## 10 Evios             10 Male          Human    Brown        Light Brown   Alive 
+## 11 Alexia            11 Female        Human    Hazel        Blonde        Alive 
+## 12 Ares              12 Male          God      Red          Black         Alive 
+## 13 Poseidon          13 Male          God      Yellow       Blue          Alive 
+## 14 Hades             14 Male          God      Yellow       Black         Alive 
+## 15 Robots            15 <NA>          Robot    <NA>         <NA>          Alive 
+## 16 Giants            16 <NA>          Giants   Black/ Red   <NA>          Dead  
+## 17 Gods              17 Male & Female Gods     <NA>         <NA>          Alive
+```
+
+
+```
+## # A tbl_graph: 17 nodes and 22 edges
+## #
+## # An undirected multigraph with 3 components
+## #
+## # Node Data: 17 x 7 (active)
+##   Name     `Node id` Sex    Race         `Eye colour` `Hair colour` Status
+##   <chr>        <dbl> <chr>  <chr>        <chr>        <chr>         <chr> 
+## 1 Zeus             1 Male   God          Blue         Dark Grey     Dead  
+## 2 Heron            2 Male   Demigod      Blue         Brown         Alive 
+## 3 Hera             3 Female God          Blue         Aubergine     Alive 
+## 4 Electra          4 Female Human        Brown        Brown         Alive 
+## 5 Seraphim         5 Male   Human/ Demon Brown/Red    White         Dead  
+## 6 Hermes           6 Male   God          Blue         Light Brown   Alive 
+## # ... with 11 more rows
+## #
+## # Edge Data: 22 x 4
+##    from    to Weight Type      
+##   <int> <int>  <dbl> <chr>     
+## 1     3    16      3 Associates
+## 2     6    13      1 Family    
+## 3     1    13      6 Brothers  
+## # ... with 19 more rows
+```
+
+
+<img src="unnamed-chunk-7-1.png" width="480" />
+
 
 
 ## Introduction to Graph 1
@@ -116,23 +240,15 @@ description: This is my data viz work in R and RStudio!
 ## $ vehicles   <list> <"Snowspeeder", "Imperial Speeder Bike">, <>, <>, <>, "Imp~
 ## $ starships  <list> <"X-wing", "Imperial shuttle">, <>, <>, "TIE Advanced x1",~
 ```
->>>>>>> .merge_file_a10556
 
-<img src="unnamed-chunk-2-1.png" width="480" />
+<img src="unnamed-chunk-9-1.png" width="480" />
 
 ## Graph 2
 
-<<<<<<< .merge_file_a10424
-In the first week we were also told to make a graph using a penguins dataset. The graph i'm showing below shows the flipper length in milli-meters of the male and female population.
-
-The variables for this table are: Species, Island, Bill length in milli meters, Bill depth in millimeters, Flipper depth in millimeters, Body mass in grams, Sex and Year.
- 
-=======
 ### In the first week we were also told to make a graph using a penguins dataset. The graph i'm showing below shows the flipper length in milli-meters of the male and female population.
 
 ### The variables for this table are: Species, Island, Bill length in milli meters, Bill depth in millimeters, Flipper depth in millimeters, Body mass in grams, Sex and Year.
 
->>>>>>> .merge_file_a10556
 
 ```
 ## [1] "species"           "island"            "bill_length_mm"   
@@ -174,25 +290,14 @@ The variables for this table are: Species, Island, Bill length in milli meters, 
 ## [1] TRUE
 ```
 
-<<<<<<< .merge_file_a10424
-<img src="unnamed-chunk-4-1.png" width="480" />
 
-## Graph 3.
-
-In this assignment we were told to make a csv file with our own dataset on a particular episode of a particular tv show, movie, book, etc. I chose the show Blood Of Zeus which is on Netflix as that was the last show i watched during the holidays. 
-
-The graph bellow shows us the number of characters, the race of the characters and the weight of dialogues between the characters. The variables for this graph were Name, Sex, Race, Eye colour, Hair colour, Status and Dialogue weight.
-
-=======
-
-<img src="unnamed-chunk-4-1.png" width="480" />
+<img src="unnamed-chunk-11-1.png" width="480" />
 
 ## Introduction to Graph 3.
 
 ### In this assignment we were told to make a csv file with our own dataset on a particular episode of a particular tv show, movie, book, etc. I chose the show **Blood Of Zeus** which is on Netflix as that was the last show i watched during the holidays. 
 
 ### The graph bellow shows us the number of characters, the race of the characters and the weight of dialogues between the characters. The variables for this graph were *Name, Sex, Race, Eye colour, Hair colour, Status and Dialogue weight*.
->>>>>>> .merge_file_a10556
 
 
 
@@ -215,27 +320,6 @@ The graph bellow shows us the number of characters, the race of the characters a
 
 ```
 ## # A tibble: 17 x 7
-<<<<<<< .merge_file_a10424
-##    Name      `Node id` Sex          Race       `Eye colour` `Hair colour` Status
-##    <chr>         <dbl> <chr>        <chr>      <chr>        <chr>         <chr> 
-##  1 Zeus              1 Male         God        Blue         Dark Grey     Dead  
-##  2 Heron             2 Male         Demigod    Blue         Brown         Alive 
-##  3 Hera              3 Female       God        Blue         Aubergine     Alive 
-##  4 Electra           4 Female       Human      Brown        Brown         Alive 
-##  5 Seraphim          5 Male         Human/ De~ Brown/Red    White         Dead  
-##  6 Hermes            6 Male         God        Blue         Light Brown   Alive 
-##  7 Apollo            7 Male         God        Yellow       Blonde        Alive 
-##  8 Hephaest~         8 Male         God        Brown        Brown         Alive 
-##  9 Kofi              9 Male         Human      Dark Brown   Brown         Alive 
-## 10 Evios            10 Male         Human      Brown        Light Brown   Alive 
-## 11 Alexia           11 Female       Human      Hazel        Blonde        Alive 
-## 12 Ares             12 Male         God        Red          Black         Alive 
-## 13 Poseidon         13 Male         God        Yellow       Blue          Alive 
-## 14 Hades            14 Male         God        Yellow       Black         Alive 
-## 15 Robots           15 <NA>         Robot      <NA>         <NA>          Alive 
-## 16 Giants           16 <NA>         Giants     Black/ Red   <NA>          Dead  
-## 17 Gods             17 Male & Fema~ Gods       <NA>         <NA>          Alive
-=======
 ##    Name       `Node id` Sex           Race     `Eye colour` `Hair colour` Status
 ##    <chr>          <dbl> <chr>         <chr>    <chr>        <chr>         <chr> 
 ##  1 Zeus               1 Male          God      Blue         Dark Grey     Dead  
@@ -255,7 +339,6 @@ The graph bellow shows us the number of characters, the race of the characters a
 ## 15 Robots            15 <NA>          Robot    <NA>         <NA>          Alive 
 ## 16 Giants            16 <NA>          Giants   Black/ Red   <NA>          Dead  
 ## 17 Gods              17 Male & Female Gods     <NA>         <NA>          Alive
->>>>>>> .merge_file_a10556
 ```
 
 
@@ -284,24 +367,20 @@ The graph bellow shows us the number of characters, the race of the characters a
 ## # ... with 19 more rows
 ```
 
-
-<<<<<<< .merge_file_a10424
-<img src="unnamed-chunk-7-1.png" width="480" />
-
 ## Reflections
 
-=======
+This workshop really opened me up to the world of coding, I had a cycle before this that was based on a few coding software as well but it never came close to being this stressful whenever I got an error or when freeing when I got the result I wanted. 
 
-<img src="unnamed-chunk-7-1.png" width="480" />
+Coming into the workshop I thought i would not like it as much because of the amount I complained in the previous cycle about coding but it actually turned out to be fun and having Arvind as a facilitator was a real plus point as he was patient enough to explain to my classmates and i where we were going wrong and also rectify our mistakes. 
+All in all i learnt a lot from this workshop and it was a great experience.
+=
+
+<img src="unnamed-chunk-14-1.png" width="480" />
 
 ## Reflections
->>>>>>> .merge_file_a10556
 This workshop really opened me up to the world of coding, I had a cycle before this that was based on a few coding software as well but it never came close to being this stressful whenever I got an error or when freeing when I got the result I wanted. 
 
 Coming into the workshop I thought i would not like it as much because of the amount I complained in the previous cycle about coding but it actually turned out to be fun and having Arvind as a facilitator was a real plus point as he was patient enough to explain to my classmates and i where we were going wrong and also rectify our mistakes. 
 
-<<<<<<< .merge_file_a10424
-All in all i learnt a lot from this workshop and it was a great experience.
-=======
 All in all i learnt a lot from this workshop and it was a great experience
->>>>>>> .merge_file_a10556
+>>>>>>> .merge_file_a09976

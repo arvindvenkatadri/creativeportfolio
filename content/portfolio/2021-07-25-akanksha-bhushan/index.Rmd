@@ -16,18 +16,13 @@ output:
     fig_width: 5
     fig_height: 5
     keep_md: yes
-<<<<<<< .merge_file_a16152
 description: These are some of the best works from this course.
-=======
-description: This is my data viz work in R and RStudio!
->>>>>>> .merge_file_a09976
 ---
 
 ```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
 ## Load frequently used packages for blog posts
 library(tidyverse)
-<<<<<<< .merge_file_a16152
 library(dplyr) 
 
 library(palmerpenguins)
@@ -118,11 +113,6 @@ ggraph(graph = BOZ, layout = "fr") +
                   size = 3) +
   
   labs(title = "FINALLY")
-=======
-library(palmerpenguins)
-library(RColorBrewer)
-library(tidygraph)
-library(ggraph)
 
 ```
 
@@ -194,7 +184,6 @@ BOZ<- tbl_graph(nodes = BOZ_nodes,
                 edges = BOZ_edges, 
                 directed = FALSE)
 BOZ
->>>>>>> .merge_file_a09976
 ```
 
 ## Reflections
@@ -202,10 +191,8 @@ BOZ
 This workshop really opened me up to the world of coding, I had a cycle before this that was based on a few coding software as well but it never came close to being this stressful whenever I got an error or when freeing when I got the result I wanted. 
 
 Coming into the workshop I thought i would not like it as much because of the amount I complained in the previous cycle about coding but it actually turned out to be fun and having Arvind as a facilitator was a real plus point as he was patient enough to explain to my classmates and i where we were going wrong and also rectify our mistakes. 
-
-<<<<<<< .merge_file_a16152
 All in all i learnt a lot from this workshop and it was a great experience.
-=======
+=
 
 ```{r}
 ggraph(graph = BOZ, layout = "fr") +
