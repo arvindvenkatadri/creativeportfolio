@@ -48,6 +48,10 @@ ggplot(diamonds) +
    ggtitle("Depth")
 ```
 
+
+## Graph 2 
+
+
 ```{r}
 bbox_bom <- getbb("Mumbai")
 
@@ -67,10 +71,12 @@ ggplot() +
   labs(title = "Mumbai", subtitle = "Taste kahaan hai?")
 ```
 
+## Graph 3 
+
 
 ```{r include=FALSE, eval=FALSE}
-naruto_edges <- read_csv("./Data/naruto-edges2.csv")
-naruto_nodes <- read.csv("./Data/naruto-nodes.csv")
+naruto_edges <- read_csv("naruto-edges2.csv")
+naruto_nodes <- read.csv("naruto-nodes.csv")
 naruto_nodes
 naruto_edges
 
@@ -78,6 +84,7 @@ naruto_edges
 ns <- tbl_graph(nodes = naruto_nodes,
                 edges = naruto_edges,
                 directed = FALSE)
+```
 
 
 
@@ -85,6 +92,7 @@ ns <- tbl_graph(nodes = naruto_nodes,
 
 
 
+```{r}
 ggraph(graph = ns, layout = "kk") +
        geom_edge_link(aes(width = Weight)) +
   geom_node_point(aes(fill = Village),
@@ -102,4 +110,6 @@ ggraph(graph = ns, layout = "kk") +
    
 ```
 
+## Reflection 
 
+I found the workshop a lot of fun. I have a bit of prior experience with coding, so it was quite interesting to get the hang of a new language. R is quite fun to use, it is also very intuitive. I never needed help with the syntax, since all the commands were easy to grasp and made sense. My experience with the class itself was pretty amazing. I've never had a teacher start the day with music sessions, it was honestly quite refreshing, especially early in the morning when I was still a bit sleepy. Also the recorded sessions were a blessing since i could immediately clarify any doubts I had.

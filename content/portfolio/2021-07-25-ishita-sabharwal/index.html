@@ -37,36 +37,36 @@ bbox_l &lt;- osmdata::getbb(&quot;Delhi, India&quot;)
 #bbox_p &lt;- prettymapr::searchbbox(&quot;Delhi, India&quot;) </code></pre>
 <pre class="r"><code>dat_B &lt;- extract_osm_objects (key = &#39;building&#39;, bbox = bbox) </code></pre>
 <pre><code>## Issuing query to Overpass API ...</code></pre>
-<pre><code>## Rate limit: 0</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
 <pre><code>## Query complete!</code></pre>
 <pre><code>## converting OSM data to sf format</code></pre>
 <pre class="r"><code>dat_H &lt;- extract_osm_objects (key = &#39;highway&#39;, bbox = bbox)</code></pre>
 <pre><code>## Issuing query to Overpass API ...</code></pre>
-<pre><code>## Rate limit: 0</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
 <pre><code>## Query complete!</code></pre>
 <pre><code>## converting OSM data to sf format</code></pre>
 <pre class="r"><code>dat_P &lt;- extract_osm_objects (key = &#39;park&#39;, bbox = bbox)</code></pre>
 <pre><code>## Issuing query to Overpass API ...</code></pre>
-<pre><code>## Rate limit: 0</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
 <pre><code>## Query complete!</code></pre>
 <pre><code>## converting OSM data to sf format</code></pre>
 <pre class="r"><code>dat_G &lt;- extract_osm_objects (key = &#39;landuse&#39;, value = &#39;grass&#39;, bbox = bbox)</code></pre>
 <pre><code>## Issuing query to Overpass API ...</code></pre>
-<pre><code>## Rate limit: 0</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
 <pre><code>## Query complete!</code></pre>
 <pre><code>## converting OSM data to sf format</code></pre>
 <pre><code>## Warning in extract_osm_objects(key = &quot;landuse&quot;, value = &quot;grass&quot;, bbox = bbox):
 ## No valid data returned. (Maybe try a different &#39;return_type&#39;)</code></pre>
 <pre class="r"><code>dat_T &lt;- extract_osm_objects (key = &#39;natural&#39;, value = &#39;tree&#39;, bbox = bbox,return_type = &quot;point&quot;)</code></pre>
 <pre><code>## Issuing query to Overpass API ...</code></pre>
-<pre><code>## Rate limit: 0</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
 <pre><code>## Query complete!</code></pre>
 <pre><code>## converting OSM data to sf format</code></pre>
 <pre><code>## Warning in extract_osm_objects(key = &quot;natural&quot;, value = &quot;tree&quot;, bbox = bbox, :
 ## No valid data returned. (Maybe try a different &#39;return_type&#39;)</code></pre>
 <pre class="r"><code>dat_R &lt;- extract_osm_objects(bbox = bbox, key = &quot;amenity&quot;, value = &quot;restaurant&quot;, return_type = &quot;point&quot;) </code></pre>
 <pre><code>## Issuing query to Overpass API ...</code></pre>
-<pre><code>## Rate limit: 0</code></pre>
+<pre><code>## Rate limit: 2</code></pre>
 <pre><code>## Query complete!</code></pre>
 <pre><code>## converting OSM data to sf format</code></pre>
 <pre class="r"><code>tmap_mode(&quot;plot&quot;)</code></pre>
@@ -90,14 +90,17 @@ tm_shape(dat_B) + tm_bubbles(col = &quot;red&quot;) +
 <div id="setup-reading-data" class="section level4">
 <h4>*SETUP-Reading data</h4>
 <pre class="r"><code>hillhouse_nodes &lt;- read_csv(&quot;data/hillhouse-nodes.csv&quot;)</code></pre>
-<pre><code>## Rows: 24 Columns: 7</code></pre>
-<pre><code>## -- Column specification --------------------------------------------------------
-## Delimiter: &quot;,&quot;
-## chr (6): name, sex, race, position, haircolour, sign
-## dbl (1): birthyear</code></pre>
 <pre><code>## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+## -- Column specification --------------------------------------------------------
+## cols(
+##   name = col_character(),
+##   sex = col_character(),
+##   race = col_character(),
+##   birthyear = col_double(),
+##   position = col_character(),
+##   haircolour = col_character(),
+##   sign = col_character()
+## )</code></pre>
 <pre class="r"><code>hillhouse_nodes</code></pre>
 <pre><code>## # A tibble: 24 x 7
 ##    name                      sex   race  birthyear position haircolour sign    
@@ -114,14 +117,14 @@ tm_shape(dat_B) + tm_bubbles(col = &quot;red&quot;) +
 ## 10 Kevin Harris              M     White      1975 Other    black      &lt;NA&gt;    
 ## # ... with 14 more rows</code></pre>
 <pre class="r"><code>hillhouse_edges &lt;- read_csv(&quot;data/hillhouse-edges.csv&quot;)</code></pre>
-<pre><code>## Rows: 18 Columns: 4</code></pre>
-<pre><code>## -- Column specification --------------------------------------------------------
-## Delimiter: &quot;,&quot;
-## chr (3): from, to, type
-## dbl (1): ID</code></pre>
 <pre><code>## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+## -- Column specification --------------------------------------------------------
+## cols(
+##   from = col_character(),
+##   to = col_character(),
+##   type = col_character(),
+##   ID = col_double()
+## )</code></pre>
 <pre class="r"><code>hillhouse_edges</code></pre>
 <pre><code>## # A tibble: 18 x 4
 ##    from                      to                   type          ID

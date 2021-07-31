@@ -56,7 +56,7 @@ dat_B <- extract_osm_objects (key = 'building', bbox = bbox)
 ```
 
 ```
-## Rate limit: 0
+## Rate limit: 2
 ```
 
 ```
@@ -76,7 +76,7 @@ dat_H <- extract_osm_objects (key = 'highway', bbox = bbox)
 ```
 
 ```
-## Rate limit: 0
+## Rate limit: 2
 ```
 
 ```
@@ -96,7 +96,7 @@ dat_P <- extract_osm_objects (key = 'park', bbox = bbox)
 ```
 
 ```
-## Rate limit: 0
+## Rate limit: 2
 ```
 
 ```
@@ -116,7 +116,7 @@ dat_G <- extract_osm_objects (key = 'landuse', value = 'grass', bbox = bbox)
 ```
 
 ```
-## Rate limit: 0
+## Rate limit: 2
 ```
 
 ```
@@ -141,7 +141,7 @@ dat_T <- extract_osm_objects (key = 'natural', value = 'tree', bbox = bbox,retur
 ```
 
 ```
-## Rate limit: 0
+## Rate limit: 2
 ```
 
 ```
@@ -166,7 +166,7 @@ dat_R <- extract_osm_objects(bbox = bbox, key = "amenity", value = "restaurant",
 ```
 
 ```
-## Rate limit: 0
+## Rate limit: 2
 ```
 
 ```
@@ -218,20 +218,17 @@ hillhouse_nodes <- read_csv("data/hillhouse-nodes.csv")
 ```
 
 ```
-## Rows: 24 Columns: 7
-```
-
-```
-## -- Column specification --------------------------------------------------------
-## Delimiter: ","
-## chr (6): name, sex, race, position, haircolour, sign
-## dbl (1): birthyear
-```
-
-```
 ## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## -- Column specification --------------------------------------------------------
+## cols(
+##   name = col_character(),
+##   sex = col_character(),
+##   race = col_character(),
+##   birthyear = col_double(),
+##   position = col_character(),
+##   haircolour = col_character(),
+##   sign = col_character()
+## )
 ```
 
 ```r
@@ -260,20 +257,14 @@ hillhouse_edges <- read_csv("data/hillhouse-edges.csv")
 ```
 
 ```
-## Rows: 18 Columns: 4
-```
-
-```
-## -- Column specification --------------------------------------------------------
-## Delimiter: ","
-## chr (3): from, to, type
-## dbl (1): ID
-```
-
-```
 ## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## -- Column specification --------------------------------------------------------
+## cols(
+##   from = col_character(),
+##   to = col_character(),
+##   type = col_character(),
+##   ID = col_double()
+## )
 ```
 
 ```r
