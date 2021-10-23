@@ -1,0 +1,512 @@
+ggplot(msleep) + 
+geom_density(aes(x = brainwt, 
+color = order, 
+fill = conservation), 
+alpha = 0.2)
+library(tidyverse)
+ggplot(msleep) + 
+geom_density(aes(x = brainwt, 
+color = order, 
+fill = conservation), 
+alpha = 0.2)
+msleep
+distinct(msleep$order) %>% length()
+distinct(msleep$order)
+msleep$order
+ggplot(msleep) + 
+geom_density(aes(x = brainwt),
+alpha = 0.2)
+range(msleep$brainwt)
+msleep %>% drop_na()
+msleep
+blogdown:::new_post_addin()
+blogdown:::preview_site()
+library(tidyverse)
+## This image will be saved in the /post/*_files/ directory
+## Use echo = FALSE if you want to hide the code for making the plot
+plot(1:10, 10:1)
+library(tidyverse)
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+blogdown::serve_site()
+blogdown:::serve_site()
+blogdown:::serve_site()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+blogdown:::preview_site()
+blogdown:::serve_site()
+blogdown:::serve_site()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+blogdown:::serve_site()
+knitr::opts_chunk$set(fig.path = "")
+## Load frequently used packages for blog posts
+library(tidyverse)
+## This image will be saved in the /post/*_files/ directory
+## Use echo = FALSE if you want to hide the code for making the plot
+plot(1:10, 10:1)
+blogdown:::new_post_addin()
+getwd()
+blogdown:::serve_site()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+library(blogdown)
+blogdown:::serve_site()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+blogdown:::new_post_addin()
+source("C:/Users/Arvind/Google Drive/R work/MyWebsites/creativeportfolio/.Rprofile", echo=TRUE)
+usethis::edit_r_profile(scope = "project")
+source("C:/Users/Arvind/Google Drive/R work/MyWebsites/creativeportfolio/.Rprofile", echo=TRUE)
+blogdown:::serve_site()
+source("C:/Users/Arvind/Google Drive/R work/MyWebsites/creativeportfolio/.Rprofile", echo=TRUE)
+blogdown:::serve_site()
+knitr::opts_chunk$set(fig.path = "")
+## Load frequently used packages for blog posts
+library(tidyverse)
+## This image will be saved in the /post/*_files/ directory
+## Use echo = FALSE if you want to hide the code for making the plot
+plot(1:10, 10:1)
+getwd()
+knitr::opts_chunk$set(fig.path = "")
+## Load frequently used packages for blog posts
+library(tidyverse)
+here::i_am()
+knitr::opts_chunk$set(fig.path = "")
+## Load frequently used packages for blog posts
+library(tidyverse)
+here::set_here()
+knitr::opts_chunk$set(fig.path = "")
+## Load frequently used packages for blog posts
+library(tidyverse)
+here::set_here()
+![]("./default.jpg")
+knitr::opts_chunk$set(fig.path = "")
+## Load frequently used packages for blog posts
+library(tidyverse)
+![]("./default.jpg")
+blogdown:::insert_image_addin()
+knitr::opts_chunk$set(fig.path = "")
+## Load frequently used packages for blog posts
+library(tidyverse)
+blogdown:::insert_image_addin()
+ymlthis:::launch_yaml_addin()
+blogdown:::serve_site()
+blogdown:::serve_site()
+library(blogdown)
+blogdown::check_config()
+check_hugo()
+check_netlify()
+check_content()
+check_site()
+build_site(build_rmd = "timestamp")
+serve_site()
+build_site(build_rmd = "timestamp")
+blogdown:::serve_site()
+blogdown:::serve_site()
+library(blogdown)
+blogdown::build_site(build_rmd = TRUE)
+blogdown:::preview_site()
+blogdown:::preview_site()
+blogdown::build_site(build_rmd = TRUE)
+blogdown::build_site(build_rmd = TRUE)
+blogdown:::preview_site()
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+library(osmplotr)
+library(prettymapr)
+library(sf)
+blogdown:::serve_site()
+library(blogdown)
+blogdown::build_site(build_rmd = "timestamp")
+?searchbbox
+??searchbbox
+blogdown:::preview_site()
+library(osmdata)
+library(rnaturalearth)
+library(osmdata)
+library(prettymapr)
+library(tidyverse)
+library(osmplotr)
+library(tmap)
+library(sf)
+ggplot(midwest, aes(x = poptotal, y = popamerindian)) + geom_point(colour = "red") + geom_smooth(colour = "yellow")
+bojack_nodes <- read_csv("./Data/bojack-nodes.csv",trim_ws = TRUE) %>%
+select(1:4) %>%
+drop_na()
+bojack_edges <- read_csv("./Data/bojack-edges.csv",trim_ws = TRUE)%>%
+select(1:4) %>%
+drop_na()
+bojack_nodes
+bojack_edges
+bojack <- tbl_graph(nodes = bojack_nodes,
+edges = bojack_edges,
+directed = FALSE)
+library(osmdata)
+library(rnaturalearth)
+library(osmdata)
+library(prettymapr)
+library(tidyverse)
+library(osmplotr)
+library(tmap)
+library(sf)
+library(tidygraph)
+library(ggraph)
+ggplot(midwest, aes(x = poptotal, y = popamerindian)) + geom_point(colour = "red") + geom_smooth(colour = "yellow")
+bojack_nodes <- read_csv("./Data/bojack-nodes.csv",trim_ws = TRUE) %>%
+select(1:4) %>%
+drop_na()
+bojack_edges <- read_csv("./Data/bojack-edges.csv",trim_ws = TRUE)%>%
+select(1:4) %>%
+drop_na()
+bojack_nodes
+bojack_edges
+bojack <- tbl_graph(nodes = bojack_nodes,
+edges = bojack_edges,
+directed = FALSE)
+ggraph(graph = bojack,  layout = "kk") +
+geom_edge_link(width = 2, color = "black") +
+geom_node_point(shape = 21, size = 8, fill = "pink", color = "red", stroke = 2)
+dat_B <- extract_osm_objects(key = "building", bbox = bbox_l)
+bbox_l <- bbox <- osmplotr::get_bbox(c(77.56,12.93,77.63,12.96))
+bbox_l
+dat_B <- extract_osm_objects(key = "building", bbox = bbox_l)
+dat_H <- extract_osm_objects(key = 'highway', bbox = bbox_l)
+dat_P <- extract_osm_objects(key = 'park', bbox = bbox_l)
+dat_G <- extract_osm_objects(key = 'landuse', value = 'grass', bbox = bbox_l)
+dat_T <- extract_osm_objects(key = 'natural', value = 'tree', bbox = bbox_l)
+tm_shape(dat_B) + tm_polygons(col = "gray40") +
+tm_shape(dat_G) + tm_fill(size = 4, col = "orange") +
+tm_shape(dat_H) + tm_dots(col = "purple") +
+tm_shape(dat_T) + tm_dots(col = "green") +
+tm_layout(title = "Bangalore", title.size = 6, frame = TRUE, frame.lwd = 5, bg.color = "lightyellow")
+blogdown:::preview_site()
+knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
+## Load frequently used packages for blog posts
+library(tidyverse)
+library(osmdata)
+library(rnaturalearth)
+library(prettymapr)
+library(osmplotr)
+library(tmap)
+library(sf)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+(diamonds)
+ggplot(diamonds) + geom_point(aes(x = carat,  y = price, color = cut, shape = color))
+bbox_thane <- osmdata::getbb("Thane, India")
+dat_thane_H <- extract_osm_objects(bbox = bbox_thane, key = "highway")
+dat_thane_R <- extract_osm_objects(bbox = bbox_thane, key = "amenity", value = "restaurant", return_type = "point")
+tmap_mode("plot")
+tm_shape(dat_thane_H) + tm_lines(col = "dodgerblue", lwd = 1) + tm_shape(dat_thane_R) + tm_dots(size = 0.5, col = "pink", shape = 20) + tm_text("name", auto.placement = TRUE, size = 0.40) +
+tm_scale_bar(
+width = 0.25,
+position = c("left", "bottom"),
+text.size = 0.35
+) +
+tm_add_legend(type = "symbol", col = "pink",
+title = "restaurants") +
+tm_layout(main.title = "Restaurants in Thane",
+bg.color = "lightgrey")
+bojack_nodes <- read_delim(delim = ",","./Data/bojack_nodes.csv")
+bojack_edges <- read_delim(delim = ",","./Data/bojack_edges.csv")
+bojack_nodes
+bojack_edges
+bh <- tbl_graph(nodes = bojack_nodes,
+edges = bojack_edges,
+directed = FALSE)
+bh
+ggraph(graph = bh, layout = "fr") +
+geom_edge_link0(aes(width = weight)) +
+geom_node_point(aes( colour = job), size = 5) +
+geom_node_label(aes(label = name),
+repel = TRUE, max.overlaps = 20,
+alpha = 0.9,
+size = 2)
+blogdown:::preview_site()
+knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
+## Load frequently used packages for blog posts
+library(tidyverse)
+library(palmerpenguins)
+library(RColorBrewer)
+library(tidygraph)
+library(ggraph)
+BOZ_nodes <- read_csv(".Data/BOZ_nodes.csv", col_names = TRUE)
+BOZ_nodes <- read_csv(".Data/BOZ_nodes.csv", col_names = TRUE)
+getwd()
+knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
+## Load frequently used packages for blog posts
+library(tidyverse)
+library(palmerpenguins)
+library(RColorBrewer)
+library(tidygraph)
+library(ggraph)
+starwars
+glimpse(starwars)
+starwars %>% filter(homeworld == "Naboo") %>%
+ggplot(aes(x = species,
+y = name,
+color = homeworld))  +
+geom_point(size = 4)  +
+facet_wrap(~species)
+names(penguins) # Column, i.e. Variable names
+head(penguins) # first six rows
+tail(penguins) # Last six rows
+dim(penguins) # Size of dataset
+# Check for missing data
+any(is.na(penguins) == TRUE)
+ggplot(penguins) +
+geom_histogram(aes(x = flipper_length_mm,
+fill = sex))
+BOZ_nodes <- read_csv(".Data/BOZ_nodes.csv", col_names = TRUE)
+setwd("C:/Users/Arvind/Google Drive/R work/MyWebsites/CreativePortfolio/content/portfolio/2021-07-25-akanksha-bhushan")
+BOZ_nodes <- read_csv(".Data/BOZ_nodes.csv", col_names = TRUE)
+BOZ_nodes <- read_csv("./Data/BOZ_nodes.csv", col_names = TRUE)
+BOZ_edges <- read_csv("./Data/BOZ_edges.csv", col_names = TRUE)
+BOZ_edges
+BOZ_nodes
+blogdown:::preview_site()
+ggraph(graph = BOZ, layout = "fr") +
+geom_edge_link0(aes(width = Weight)) +
+geom_node_point(aes(colour = Race,fill = Race), size = 5, shape = 25) +
+geom_node_label(aes(label = Name),
+repel = TRUE, max.overlaps = 15,
+alpha = 0.6,
+size = 3) +
+labs(title = "FINALLY")
+BOZ<- tbl_graph(nodes = BOZ_nodes,
+edges = BOZ_edges,
+directed = FALSE)
+BOZ
+ggraph(graph = BOZ, layout = "fr") +
+geom_edge_link0(aes(width = Weight)) +
+geom_node_point(aes(colour = Race,fill = Race), size = 5, shape = 25) +
+geom_node_label(aes(label = Name),
+repel = TRUE, max.overlaps = 15,
+alpha = 0.6,
+size = 3) +
+labs(title = "FINALLY")
+knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(sf)
+library(tmap)
+library(prettymapr)
+library(osmplotr)
+library(osmdata)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(visNetwork)
+library(kableExtra)
+data<-readxl::read_xlsx("./data/data.xlsx")
+concisedData<-data %>% select(Name, Age, Nationality, Overall,Potential, Club, Value, Wage, Position, `Preferred Foot`, `Body Type`, `Skill Moves`,BallControl, SprintSpeed, GKHandling,`International Reputation`, GKReflexes)
+bbox_raj<- getbb(place_name = "Vijayanagara, Bangalore, Karnataka, India")
+blr_raj_buildings<- extract_osm_objects(bbox=bbox_raj, key = "building")
+blr_raj_roads<-extract_osm_objects(bbox = bbox_raj, key = "highway")
+blr_raj_restuarant<-extract_osm_objects(bbox=bbox_raj, key = "amenity", value= "restaurant", return_type = "point")
+bojack_nodes<-read_csv("./data/bojack-nodes.csv")
+bojack_edges<-read_csv("./data/bojack-edges.csv")
+concisedData
+# %>%
+#   kbl(., caption = "FIFA dataset") %>%
+#   kable_styling(bootstrap_options = "striped",
+#                 full_width = T) %>% scroll_box(height = "500px")
+concisedData %>% filter(`International Reputation` == "5") %>% ggplot(aes(x = `International Reputation`, fill = Value)) + geom_bar() + facet_grid(Nationality ~ Club)
+blr_raj_restuarant <- blr_raj_restuarant %>%
+dplyr::mutate(
+lat = sf::st_coordinates(blr_raj_restuarant$geometry)[, 1],
+lon = sf::st_coordinates(blr_raj_restuarant$geometry)[, 2]
+)
+map <- tmap_mode("plot")
+tm_shape(blr_raj_buildings) + tm_fill(col = "#3d3d3d", interactive = FALSE) +
+tm_shape(blr_raj_roads) + tm_lines(col = "darkgreen") + tm_shape(blr_raj_restuarant) +
+tm_graticules() + tm_symbols(
+col = "name",
+alpha = 1,
+border.lwd = 2,
+interactive = TRUE,
+popup.format = "name"
+) + tm_layout(bg.color = "white", legend.outside = TRUE, ) + tm_compass() +
+tm_scale_bar(position = "left") +
+tm_view(symbol.size.fixed = TRUE,
+set.zoom.limits = c(16, 20)) +
+tmap_options(basemaps = (Canvas = "CartoDB.DarkMatter"))
+bojack_nodes_vis <- bojack_nodes %>%
+rowid_to_column(var = "id") %>%
+rename("name" = name) %>%
+mutate(sex = case_when(sex == "F" ~ "Female",
+sex == "M" ~ "Male"))
+bojack_edges_vis <- bojack_edges %>%
+select(from, to) %>%
+left_join(., bojack_nodes_vis, by = c("from" = "name")) %>%
+left_join(., bojack_nodes_vis, by = c("to" = "name")) %>%
+select("from"= id.x, "to" = id.y)
+bojack_nodes_vis
+# %>% kable()
+#   # kbl(., caption = "Bojack nodes") %>%
+#   # kable_styling(bootstrap_options = "striped",
+#   #               full_width = T) %>% scroll_box(height = "500px")
+bojack_edges_vis
+#%>% kable()
+# kbl(., caption = "Bojack edges") %>%
+#   kable_styling(bootstrap_options = "striped",
+#                 full_width = T) %>% scroll_box(width = "300px" ,height = "500px")
+b3v<-bojack_nodes_vis %>%
+dplyr::rename("label"=name) %>%
+dplyr::rename("group"=species)
+b3v
+b3v %>%
+visNetwork(nodes = ., edges = bojack_edges_vis) %>%
+visNodes(font = list(size = 30)) %>%
+visGroups(groupname = "Human", shape = "icon",
+icon = list(code = "f183", size = 75, color = "red"),
+shadow = list(enabled = TRUE)) %>%
+visGroups(groupname = "Horse", shape = "icon",
+icon = list(code = "f111", size = 75, color = "slateblue"),
+shadow = list(enabled = TRUE)) %>%
+visGroups(groupname = "Swan", shape="icon",
+icon = list(code= "f056", size=70, color= "#4e0000" ),
+shadow = list(enabled = FALSE)) %>%
+visGroups(groupname = "Goat", shape="icon",
+icon = list(code= "f056", size=50, color= "#9d0000" ),
+shadow = list(enabled = FALSE)) %>%
+visGroups(groupname = "Dragonfly", shape="icon",
+icon = list(code= "f056", size=30, color= "#ff6262" ),
+shadow = list(enabled = FALSE)) %>%
+visGroups(groupname = "Cat", shape="icon",
+icon = list(code= "f056", size=20, color= "#ff9d9d" ),
+shadow = list(enabled = FALSE)) %>%
+visGroups(groupname = "Dog", shape="icon",
+icon = list(code= "f056", size=55, color= "#b14e4e" ),
+shadow = list(enabled = FALSE)) %>%
+addFontAwesome() %>%
+visLegend() %>%
+visInteraction(navigationButtons = TRUE,
+hover = TRUE,
+selectConnectedEdges = TRUE,
+hoverConnectedEdges = TRUE,
+zoomView = TRUE)
+blogdown:::preview_site()
+blogdown:::preview_site()
+blogdown::serve_site()
+blogdown::stop_server()
+blogdown::stop_server()
+blogdown::serve_site()
+knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(sf)
+library(tmap)
+library(osmplotr)
+library(osmdata)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(visNetwork)
+concisedData
+knitr::opts_chunk$set(fig.path = "", echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(sf)
+library(tmap)
+library(osmplotr)
+library(osmdata)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(visNetwork)
+data<-readxl::read_xlsx("./data/data.xlsx")
+concisedData<-data %>% select(Name, Age, Nationality, Overall,Potential, Club, Value, Wage, Position, `Preferred Foot`, `Body Type`, `Skill Moves`,BallControl, SprintSpeed, GKHandling,`International Reputation`, GKReflexes)
+bbox_raj<- getbb(place_name = "Vijayanagara, Bangalore, Karnataka, India")
+blr_raj_buildings<- extract_osm_objects(bbox=bbox_raj, key = "building")
+blr_raj_roads<-extract_osm_objects(bbox = bbox_raj, key = "highway")
+blr_raj_restuarant<-extract_osm_objects(bbox=bbox_raj, key = "amenity", value= "restaurant", return_type = "point")
+bojack_nodes<-read_csv("./data/bojack-nodes.csv")
+bojack_edges<-read_csv("./data/bojack-edges.csv")
+concisedData
+# %>%
+#   kbl(., caption = "FIFA dataset") %>%
+#   kable_styling(bootstrap_options = "striped",
+#                 full_width = T) %>% scroll_box(height = "500px")
+concisedData %>%
+filter(`International Reputation`=="5") %>% ggplot(aes(x=`International Reputation`,fill=Value)) +
+geom_bar() +
+facet_grid(Nationality~Club)
+blr_raj_restuarant <- blr_raj_restuarant %>%
+dplyr::mutate(
+lat = sf::st_coordinates(blr_raj_restuarant$geometry)[, 1],
+lon = sf::st_coordinates(blr_raj_restuarant$geometry)[, 2]
+)
+map <- tmap_mode("plot")
+tm_shape(blr_raj_buildings) + tm_fill(col = "#3d3d3d", interactive = FALSE) +
+tm_shape(blr_raj_roads) + tm_lines(col = "darkgreen") + tm_shape(blr_raj_restuarant) +
+tm_graticules() + tm_symbols(
+col = "name",
+alpha = 1,
+border.lwd = 2,
+interactive = TRUE,
+popup.format = "name"
+) + tm_layout(bg.color = "white", legend.outside = TRUE, ) + tm_compass() +
+tm_scale_bar(position = "left") +
+tm_view(symbol.size.fixed = TRUE,
+set.zoom.limits = c(16, 20)) +
+tmap_options(basemaps = (Canvas = "CartoDB.DarkMatter"))
+bojack_nodes_vis <- bojack_nodes %>%
+rowid_to_column(var = "id") %>%
+rename("name" = name) %>%
+mutate(sex = case_when(sex == "F" ~ "Female",
+sex == "M" ~ "Male"))
+bojack_edges_vis <- bojack_edges %>%
+select(from, to) %>%
+left_join(., bojack_nodes_vis, by = c("from" = "name")) %>%
+left_join(., bojack_nodes_vis, by = c("to" = "name")) %>%
+select("from"= id.x, "to" = id.y)
+bojack_nodes_vis
+# %>% kable()
+#   # kbl(., caption = "Bojack nodes") %>%
+#   # kable_styling(bootstrap_options = "striped",
+#   #               full_width = T) %>% scroll_box(height = "500px")
+bojack_edges_vis
+#%>% kable()
+# kbl(., caption = "Bojack edges") %>%
+#   kable_styling(bootstrap_options = "striped",
+#                 full_width = T) %>% scroll_box(width = "300px" ,height = "500px")
+b3v<-bojack_nodes_vis %>%
+dplyr::rename("label"=name) %>%
+dplyr::rename("group"=species)
+b3v
+b3v %>%
+visNetwork(nodes = ., edges = bojack_edges_vis) %>%
+visNodes(font = list(size = 30)) %>%
+visGroups(groupname = "Human", shape = "icon",
+icon = list(code = "f183", size = 75, color = "red"),
+shadow = list(enabled = TRUE)) %>%
+visGroups(groupname = "Horse", shape = "icon",
+icon = list(code = "f111", size = 75, color = "slateblue"),
+shadow = list(enabled = TRUE)) %>%
+visGroups(groupname = "Swan", shape="icon",
+icon = list(code= "f056", size=70, color= "#4e0000" ),
+shadow = list(enabled = FALSE)) %>%
+visGroups(groupname = "Goat", shape="icon",
+icon = list(code= "f056", size=50, color= "#9d0000" ),
+shadow = list(enabled = FALSE)) %>%
+visGroups(groupname = "Dragonfly", shape="icon",
+icon = list(code= "f056", size=30, color= "#ff6262" ),
+shadow = list(enabled = FALSE)) %>%
+visGroups(groupname = "Cat", shape="icon",
+icon = list(code= "f056", size=20, color= "#ff9d9d" ),
+shadow = list(enabled = FALSE)) %>%
+visGroups(groupname = "Dog", shape="icon",
+icon = list(code= "f056", size=55, color= "#b14e4e" ),
+shadow = list(enabled = FALSE)) %>%
+addFontAwesome() %>%
+visLegend() %>%
+visInteraction(navigationButtons = TRUE,
+hover = TRUE,
+selectConnectedEdges = TRUE,
+hoverConnectedEdges = TRUE,
+zoomView = TRUE)
